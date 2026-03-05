@@ -295,7 +295,10 @@ const CHANGELOGS = [
           </div>
           <div class="staff-note">
             <div class="name">🍎 Compote</div>
-            <em>À venir…</em>
+            Je travaille sur plusieurs systèmes back-end :<br><br>
+            <strong>HDV (zap-auctions)</strong> — Hôtel des Ventes multi-serveur. Mettez en vente vos objets avec <strong>/ah sell &lt;prix&gt;</strong>, parcourez le marché avec <strong>/ah</strong> (alias <strong>/hdv</strong>), recherchez des items avec <strong>/ah search</strong>, et consultez votre historique de ventes. Tout est synchronisé entre les serveurs.<br><br>
+            <strong>Économie (zap-economy)</strong> — Nouveau système de monnaie synchronisé. Consultez votre solde avec <strong>/money</strong>, envoyez des cols avec <strong>/pay</strong>.<br><br>
+            <strong>Chat (zap-chat)</strong> — Chat global unifié entre tous les palier. Messages privés avec <strong>/msg</strong>.
           </div>`
       }
     ]
