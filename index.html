@@ -385,7 +385,13 @@
 
 <div class="footer">SAOFR — Changelogs</div>
 
-<script src="changelogs.js"></script>
+<script>
+  // Cache-bust: force le rechargement de changelogs.js a chaque visite
+  const s = document.createElement('script');
+  s.src = 'changelogs.js?t=' + Date.now();
+  document.head.appendChild(s);
+  s.onload = () => init();
+</script>
 <script>
   function toggleSection(header) {
     header.parentElement.classList.toggle('collapsed');
@@ -440,7 +446,6 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  init();
 </script>
 
 </body>

@@ -20,7 +20,7 @@ const CHANGELOGS = [
         type: "important",
         icon: "⚔️",
         title: "Importants",
-        count: "5 changements",
+        count: "6 changements",
         content: `
           <ul>
             <li>Nouveau <strong>SAOUI</strong></li>
@@ -28,6 +28,7 @@ const CHANGELOGS = [
             <li>Nouveau <strong>Système d'économie</strong></li>
             <li>Transfert du combo sur le <strong>clic gauche</strong> pour les classes <strong>Assassin</strong> et <strong>Guerrier</strong></li>
             <li>Une compensation de <strong>parchemins des 3 types</strong> sera offerte en <strong>3 exemplaires</strong></li>
+            <li>Retour de <strong>/audio</strong> — musiques et vocal in-game</li>
           </ul>`
       },
       {
