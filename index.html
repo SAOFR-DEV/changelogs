@@ -8,43 +8,43 @@
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
   :root {
-    --bg-primary: #1a1d28;
-    --bg-secondary: #1f2333;
-    --bg-card: #252a3a;
-    --bg-card-hover: #2c3248;
-    --bg-code: #2a2f42;
-    --border: #353b50;
-    --border-light: #414862;
-    --text-primary: #eceef3;
-    --text-secondary: #a0a7be;
-    --text-muted: #6b7490;
+    --bg-primary: #13111c;
+    --bg-secondary: #1a1726;
+    --bg-card: #1f1b2e;
+    --bg-card-hover: #271f3a;
+    --bg-code: #231e33;
+    --border: #2e2745;
+    --border-light: #3d3558;
+    --text-primary: #f0ecf8;
+    --text-secondary: #b5adc8;
+    --text-muted: #7a6f96;
     --accent: #f5a623;
-    --accent-dim: #c4841a;
-    --accent-glow: rgba(245, 166, 35, 0.15);
-    --buff: #34d399;
-    --buff-bg: rgba(52, 211, 153, 0.08);
-    --buff-border: rgba(52, 211, 153, 0.22);
-    --nerf: #f87171;
-    --nerf-bg: rgba(248, 113, 113, 0.08);
-    --nerf-border: rgba(248, 113, 113, 0.22);
+    --accent-secondary: #ffd074;
+    --accent-glow: rgba(245, 166, 35, 0.18);
+    --buff: #4ade80;
+    --buff-bg: rgba(74, 222, 128, 0.1);
+    --buff-border: rgba(74, 222, 128, 0.25);
+    --nerf: #fb7185;
+    --nerf-bg: rgba(251, 113, 133, 0.1);
+    --nerf-border: rgba(251, 113, 133, 0.25);
     --fix: #60a5fa;
-    --fix-bg: rgba(96, 165, 250, 0.08);
-    --fix-border: rgba(96, 165, 250, 0.22);
+    --fix-bg: rgba(96, 165, 250, 0.1);
+    --fix-border: rgba(96, 165, 250, 0.25);
     --adjust: #c084fc;
-    --adjust-bg: rgba(192, 132, 252, 0.08);
-    --adjust-border: rgba(192, 132, 252, 0.22);
+    --adjust-bg: rgba(192, 132, 252, 0.1);
+    --adjust-border: rgba(192, 132, 252, 0.25);
     --add: #22d3ee;
-    --add-bg: rgba(34, 211, 238, 0.08);
-    --add-border: rgba(34, 211, 238, 0.22);
+    --add-bg: rgba(34, 211, 238, 0.1);
+    --add-border: rgba(34, 211, 238, 0.25);
     --event: #f9a8d4;
-    --event-bg: rgba(249, 168, 212, 0.08);
-    --event-border: rgba(249, 168, 212, 0.22);
+    --event-bg: rgba(249, 168, 212, 0.1);
+    --event-border: rgba(249, 168, 212, 0.25);
     --important: #fbbf24;
-    --important-bg: rgba(251, 191, 36, 0.08);
-    --important-border: rgba(251, 191, 36, 0.22);
-    --staff: #94a3b8;
-    --staff-bg: rgba(148, 163, 184, 0.08);
-    --staff-border: rgba(148, 163, 184, 0.22);
+    --important-bg: rgba(251, 191, 36, 0.1);
+    --important-border: rgba(251, 191, 36, 0.25);
+    --staff: #a8a2b8;
+    --staff-bg: rgba(168, 162, 184, 0.08);
+    --staff-border: rgba(168, 162, 184, 0.2);
     --radius: 14px;
     --radius-sm: 8px;
   }
@@ -62,28 +62,35 @@
   /* ========== HEADER ========== */
   .header {
     position: relative;
-    padding: 3rem 1.5rem 2.5rem;
+    padding: 2.5rem 1.5rem 2rem;
     text-align: center;
     overflow: hidden;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, rgba(192, 132, 252, 0.06) 0%, rgba(245, 166, 35, 0.04) 50%, transparent 100%);
   }
   .header::before {
     content: '';
     position: absolute;
-    top: 0; left: 50%;
+    top: -50px; left: 50%;
     transform: translateX(-50%);
-    width: 600px; height: 300px;
-    background: radial-gradient(ellipse, rgba(245,158,11,0.1) 0%, transparent 70%);
+    width: 700px; height: 350px;
+    background: radial-gradient(ellipse, rgba(245, 166, 35, 0.12) 0%, rgba(192, 132, 252, 0.05) 40%, transparent 70%);
     pointer-events: none;
   }
   .header-logo {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
+  }
+  .header-logo img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 20px rgba(245, 166, 35, 0.3));
   }
   .header h1 {
     font-size: 1.8rem;
     font-weight: 800;
     letter-spacing: -0.03em;
-    background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #f59e0b 100%);
+    background: linear-gradient(135deg, #f5a623 0%, #ffd074 50%, #f5a623 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -91,115 +98,54 @@
   .header p {
     color: var(--text-muted);
     font-size: 0.9rem;
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
     font-weight: 500;
   }
 
-  /* ========== SIDEBAR NAV (desktop) / TOP NAV (mobile) ========== */
-  .layout {
-    display: flex;
-    max-width: 1100px;
-    margin: 0 auto;
-    gap: 0;
-  }
-
-  .sidebar {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    width: 240px;
-    min-width: 240px;
-    padding: 1.5rem 1rem;
-    border-right: 1px solid var(--border);
-    overflow-y: auto;
-    background: var(--bg-secondary);
-  }
-  .sidebar-title {
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--text-muted);
-    margin-bottom: 0.75rem;
-    padding-left: 0.5rem;
-  }
-  .sidebar .nav-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    width: 100%;
-    background: transparent;
-    border: none;
-    color: var(--text-secondary);
-    padding: 0.6rem 0.75rem;
-    border-radius: var(--radius-sm);
-    font-size: 0.85rem;
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.15s;
-    text-align: left;
-  }
-  .sidebar .nav-btn:hover {
-    background: rgba(255,255,255,0.04);
-    color: var(--text-primary);
-  }
-  .sidebar .nav-btn.active {
-    background: var(--accent-glow);
-    color: var(--accent);
-    font-weight: 600;
-  }
-  .sidebar .nav-btn .nav-dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: var(--text-muted);
-    flex-shrink: 0;
-    transition: all 0.15s;
-  }
-  .sidebar .nav-btn.active .nav-dot {
-    background: var(--accent);
-    box-shadow: 0 0 6px var(--accent);
-  }
-
-  /* Mobile nav */
-  .mobile-nav {
-    display: none;
+  /* ========== NAV ========== */
+  .nav {
     background: var(--bg-secondary);
     border-bottom: 1px solid var(--border);
-    padding: 0.6rem 1rem;
+    padding: 0.7rem 1.5rem;
+    display: flex;
+    gap: 0.5rem;
     overflow-x: auto;
     position: sticky;
     top: 0;
     z-index: 100;
-    gap: 0.4rem;
     -webkit-overflow-scrolling: touch;
   }
-  .mobile-nav .nav-btn {
+  .nav-btn {
     background: transparent;
     border: 1px solid var(--border);
     color: var(--text-secondary);
-    padding: 0.4rem 0.9rem;
+    padding: 0.45rem 1.1rem;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 0.83rem;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     cursor: pointer;
     white-space: nowrap;
-    transition: all 0.15s;
+    transition: all 0.2s;
   }
-  .mobile-nav .nav-btn:hover { border-color: var(--accent); color: var(--text-primary); }
-  .mobile-nav .nav-btn.active {
-    background: var(--accent);
+  .nav-btn:hover {
     border-color: var(--accent);
-    color: #000;
+    color: var(--text-primary);
+    background: rgba(245, 166, 35, 0.06);
+  }
+  .nav-btn.active {
+    background: linear-gradient(135deg, rgba(245, 166, 35, 0.2), rgba(255, 208, 116, 0.12));
+    border-color: var(--accent);
+    color: var(--accent-secondary);
     font-weight: 600;
+    box-shadow: 0 0 12px rgba(245, 166, 35, 0.15);
   }
 
   /* ========== MAIN CONTENT ========== */
-  .main {
-    flex: 1;
-    min-width: 0;
-    padding: 2rem 2.5rem;
+  .container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
   }
 
   .changelog { display: none; }
@@ -211,12 +157,12 @@
   }
 
   .changelog-header {
-    margin-bottom: 2rem;
-    padding-bottom: 1.25rem;
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.1rem;
     border-bottom: 1px solid var(--border);
   }
   .changelog-date {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 800;
     letter-spacing: -0.02em;
   }
@@ -224,7 +170,7 @@
   .changelog-subtitle {
     color: var(--text-muted);
     font-size: 0.85rem;
-    margin-top: 0.3rem;
+    margin-top: 0.25rem;
   }
 
   /* ========== SECTIONS ========== */
@@ -234,9 +180,12 @@
     border-radius: var(--radius);
     margin-bottom: 0.85rem;
     overflow: hidden;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s, box-shadow 0.2s;
   }
-  .section:hover { border-color: var(--border-light); }
+  .section:hover {
+    border-color: var(--border-light);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+  }
 
   .section-header {
     display: flex;
@@ -370,24 +319,24 @@
   /* Callout */
   .callout {
     background: var(--accent-glow);
-    border: 1px solid rgba(245,158,11,0.2);
+    border: 1px solid rgba(245,166,35,0.25);
     border-radius: var(--radius-sm);
     padding: 0.6rem 0.9rem;
     margin: 0.5rem 0;
     font-size: 0.85rem;
-    color: var(--accent);
+    color: var(--accent-secondary);
   }
 
   /* Staff notes */
   .staff-note {
-    border-left: 3px solid var(--border);
+    border-left: 3px solid var(--border-light);
     padding: 0.7rem 1rem;
     margin: 0.6rem 0;
     color: var(--text-secondary);
     font-size: 0.85rem;
     line-height: 1.65;
     border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-    background: rgba(255,255,255,0.03);
+    background: rgba(192, 132, 252, 0.04);
   }
   .staff-note .name {
     font-weight: 700;
@@ -405,14 +354,13 @@
   }
 
   /* ========== RESPONSIVE ========== */
-  @media (max-width: 768px) {
-    .sidebar { display: none; }
-    .mobile-nav { display: flex; }
-    .main { padding: 1.25rem 1rem; }
+  @media (max-width: 600px) {
     .header { padding: 2rem 1rem 1.5rem; }
     .header h1 { font-size: 1.4rem; }
-    .header-logo { font-size: 2rem; }
+    .header-logo img { width: 56px; height: 56px; }
+    .container { padding: 1.25rem 1rem; }
     .changelog-date { font-size: 1.2rem; }
+    .nav { padding: 0.6rem 1rem; }
   }
 
   /* Scrollbar */
@@ -425,20 +373,14 @@
 <body>
 
 <div class="header">
-  <div class="header-logo">⚔️</div>
+  <div class="header-logo"><img src="Sao_Mc_icon.png" alt="SAOFR"></div>
   <h1>SAOFR Changelogs</h1>
   <p>Toutes les mises à jour du serveur</p>
 </div>
 
-<div class="mobile-nav" id="mobile-nav"></div>
+<div class="nav" id="nav"></div>
 
-<div class="layout">
-  <nav class="sidebar" id="sidebar">
-    <div class="sidebar-title">Mises à jour</div>
-  </nav>
-
-  <main class="main" id="changelogs"></main>
-</div>
+<div class="container" id="changelogs"></div>
 
 <div class="footer">SAOFR — Changelogs</div>
 
@@ -472,45 +414,28 @@
 
   function init() {
     const container = document.getElementById('changelogs');
-    const sidebar = document.getElementById('sidebar');
-    const mobileNav = document.getElementById('mobile-nav');
+    const nav = document.getElementById('nav');
 
     CHANGELOGS.forEach((cl, i) => {
-      // Create changelog div
       const div = document.createElement('div');
       div.className = 'changelog' + (i === 0 ? ' active' : '');
       div.dataset.index = i;
       div.innerHTML = renderChangelog(cl);
       container.appendChild(div);
 
-      // Sidebar button
       const btn = document.createElement('button');
       btn.className = 'nav-btn' + (i === 0 ? ' active' : '');
-      btn.innerHTML = `<span class="nav-dot"></span> ${cl.label}`;
+      btn.textContent = cl.label;
       btn.onclick = () => switchTo(i);
-      sidebar.appendChild(btn);
-
-      // Mobile button
-      const mbtn = document.createElement('button');
-      mbtn.className = 'nav-btn' + (i === 0 ? ' active' : '');
-      mbtn.textContent = cl.label;
-      mbtn.onclick = () => switchTo(i);
-      mobileNav.appendChild(mbtn);
+      nav.appendChild(btn);
     });
   }
 
   function switchTo(index) {
     document.querySelectorAll('.changelog').forEach(c => c.classList.remove('active'));
     document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-
     document.querySelector(`.changelog[data-index="${index}"]`).classList.add('active');
-
-    // Activate both sidebar and mobile nav buttons
-    const sidebarBtns = document.querySelectorAll('#sidebar .nav-btn');
-    const mobileBtns = document.querySelectorAll('#mobile-nav .nav-btn');
-    if (sidebarBtns[index]) sidebarBtns[index].classList.add('active');
-    if (mobileBtns[index]) mobileBtns[index].classList.add('active');
-
+    document.querySelectorAll('#nav .nav-btn')[index].classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
