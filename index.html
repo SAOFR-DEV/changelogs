@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changelogs</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg-primary: #0d0f14;
+    --bg-secondary: #13161d;
+    --bg-card: #181b24;
+    --bg-code: #1e222d;
+    --border: #252a36;
+    --text-primary: #e8eaf0;
+    --text-secondary: #8b92a8;
+    --text-muted: #5a6178;
+    --accent: #f59e0b;
+    --accent-glow: rgba(245, 158, 11, 0.15);
+    --buff: #22c55e;
+    --buff-bg: rgba(34, 197, 94, 0.08);
+    --buff-border: rgba(34, 197, 94, 0.2);
+    --nerf: #ef4444;
+    --nerf-bg: rgba(239, 68, 68, 0.08);
+    --nerf-border: rgba(239, 68, 68, 0.2);
+    --fix: #3b82f6;
+    --fix-bg: rgba(59, 130, 246, 0.08);
+    --fix-border: rgba(59, 130, 246, 0.2);
+    --adjust: #a855f7;
+    --adjust-bg: rgba(168, 85, 247, 0.08);
+    --adjust-border: rgba(168, 85, 247, 0.2);
+    --add: #06b6d4;
+    --add-bg: rgba(6, 182, 212, 0.08);
+    --add-border: rgba(6, 182, 212, 0.2);
+    --event: #f472b6;
+    --event-bg: rgba(244, 114, 182, 0.08);
+    --event-border: rgba(244, 114, 182, 0.2);
+    --important: #f59e0b;
+    --important-bg: rgba(245, 158, 11, 0.08);
+    --important-border: rgba(245, 158, 11, 0.2);
+    --staff: #64748b;
+    --staff-bg: rgba(100, 116, 139, 0.08);
+    --staff-border: rgba(100, 116, 139, 0.2);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* Header */
+  .header {
+    background: linear-gradient(180deg, rgba(245,158,11,0.08) 0%, transparent 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 2.5rem 1.5rem 2rem;
+    text-align: center;
+  }
+  .header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #f59e0b, #fbbf24);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .header p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-top: 0.4rem;
+  }
+
+  /* Navigation */
+  .nav {
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 0.45rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .nav-btn:hover { border-color: var(--accent); color: var(--text-primary); }
+  .nav-btn.active {
+    background: var(--accent-glow);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* Main content */
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+
+  /* Changelog entry */
+  .changelog {
+    display: none;
+  }
+  .changelog.active { display: block; }
+
+  .changelog-header {
+    margin-bottom: 1.5rem;
+  }
+  .changelog-date {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  .changelog-date span {
+    color: var(--accent);
+  }
+
+  /* Sections */
+  .section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.1rem;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s;
+  }
+  .section-header:hover { background: rgba(255,255,255,0.02); }
+  .section-icon { font-size: 1.1rem; }
+  .section-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    flex: 1;
+  }
+  .section-count {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background: var(--bg-code);
+    padding: 0.15rem 0.55rem;
+    border-radius: 10px;
+  }
+  .section-chevron {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    transition: transform 0.25s;
+  }
+  .section.collapsed .section-chevron { transform: rotate(-90deg); }
+  .section.collapsed .section-body { display: none; }
+
+  /* Section color variants */
+  .section.important { border-color: var(--important-border); }
+  .section.important .section-header { background: var(--important-bg); }
+  .section.important .section-title { color: var(--important); }
+
+  .section.event { border-color: var(--event-border); }
+  .section.event .section-header { background: var(--event-bg); }
+  .section.event .section-title { color: var(--event); }
+
+  .section.add { border-color: var(--add-border); }
+  .section.add .section-header { background: var(--add-bg); }
+  .section.add .section-title { color: var(--add); }
+
+  .section.buff { border-color: var(--buff-border); }
+  .section.buff .section-header { background: var(--buff-bg); }
+  .section.buff .section-title { color: var(--buff); }
+
+  .section.nerf { border-color: var(--nerf-border); }
+  .section.nerf .section-header { background: var(--nerf-bg); }
+  .section.nerf .section-title { color: var(--nerf); }
+
+  .section.fix { border-color: var(--fix-border); }
+  .section.fix .section-header { background: var(--fix-bg); }
+  .section.fix .section-title { color: var(--fix); }
+
+  .section.adjust { border-color: var(--adjust-border); }
+  .section.adjust .section-header { background: var(--adjust-bg); }
+  .section.adjust .section-title { color: var(--adjust); }
+
+  .section.staff { border-color: var(--staff-border); }
+  .section.staff .section-header { background: var(--staff-bg); }
+  .section.staff .section-title { color: var(--staff); }
+
+  /* Section body */
+  .section-body {
+    padding: 0 1.1rem 1rem;
+  }
+  .section-body ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+  .section-body li {
+    position: relative;
+    padding-left: 1.1rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+  }
+  .section-body li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--text-muted);
+    font-weight: 700;
+  }
+  .section-body li strong { color: var(--text-primary); font-weight: 600; }
+  .section-body li em { color: var(--text-muted); font-style: italic; }
+
+  /* Subsection headers */
+  .sub-header {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 0.5rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  /* Stat blocks */
+  .stat-block {
+    background: var(--bg-code);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.6rem 0.85rem;
+    margin: 0.4rem 0 0.6rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+  .stat-block .arrow { color: var(--accent); font-weight: 700; }
+  .stat-block .val-new { color: var(--text-primary); font-weight: 600; }
+
+  /* Skill name */
+  .skill-name {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0.8rem 0 0.25rem;
+  }
+
+  /* Info callout */
+  .callout {
+    background: var(--accent-glow);
+    border: 1px solid rgba(245,158,11,0.25);
+    border-radius: 8px;
+    padding: 0.6rem 0.85rem;
+    margin: 0.5rem 0;
+    font-size: 0.85rem;
+    color: var(--accent);
+  }
+
+  /* Quote block for staff notes */
+  .staff-note {
+    border-left: 3px solid var(--border);
+    padding: 0.6rem 1rem;
+    margin: 0.5rem 0;
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+  .staff-note .name {
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.3rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .header h1 { font-size: 1.5rem; }
+    .container { padding: 1rem; }
+    .section-body { padding: 0 0.85rem 0.85rem; }
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg-primary); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>⚔️ Changelogs</h1>
+  <p>Toutes les mises à jour du serveur</p>
+</div>
+
+<div class="nav" id="nav"></div>
+
+<div class="container" id="changelogs">
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CHANGELOG 05/03 -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div class="changelog" data-date="05/03/2026" data-label="05 Mars">
+
+    <!-- IMPORTANTS -->
+    <section class="section important">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-icon">⚔️</span>
+        <span class="section-title">Importants</span>
+        <span class="section-count">5 changements</span>
+        <span class="section-chevron">▼</span>
+      </div>
+      <div class="section-body">
+        <ul>
+          <li>Nouveau <strong>SAOUI</strong></li>
+          <li>Nouveau <strong>HDV</strong></li>
+          <li>Nouveau <strong>Système d'économie</strong></li>
+          <li>Transfert du combo sur le <strong>clic gauche</strong> pour les classes <strong>Assassin</strong> et <strong>Guerrier</strong></li>
+          <li>Une compensation de <strong>parchemins des 3 types</strong> sera offerte en <strong>3 exemplaires</strong></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ÉVÉNEMENTS -->
+    <section class="section event">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-icon">🎆</span>
+        <span class="section-title">Événements</span>
+        <span class="section-count">Nouvel An Chinois</span>
+        <span class="section-chevron">▼</span>
+      </div>
+      <div class="section-body">
+        <div class="sub-header">🏮 Nouvel An Chinois</div>
+        <ul>
+          <li>L'événement est officiellement <strong>terminé</strong> — la zone de farm n'est plus accessible</li>
+          <li>Des PNJs pour <strong>échanger vos dernières ressources</strong> seront encore présents</li>
+          <li>Les PNJs de <strong>fabrication d'items</strong> restent disponibles</li>
+          <li>Le spawn reste encore un peu — profitez de sa beauté !</li>
+        </ul>
+        <div class="callout">🎁 Code : <strong>NANOVA10</strong></div>
+      </div>
+    </section>
+
+    <!-- AJOUTS -->
+    <section class="section add">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-icon">✨</span>
+        <span class="section-title">Ajouts</span>
+        <span class="section-count">15+ ajouts</span>
+        <span class="section-chevron">▼</span>
+      </div>
+      <div class="section-body">
+        <div class="sub-header">🦌 Set des Cerfs Paisibles</div>
+        <ul>
+          <li>Nouvel <strong>Artefact</strong></li>
+          <li>Nouveau <strong>Gant</strong></li>
+          <li>Nouveau <strong>Bracelet</strong></li>
+        </ul>
+        <div class="sub-header">🟢 Set des Slimes Gélatineux</div>
+        <ul>
+          <li>Nouvelle <strong>Bague</strong></li>
+          <li>Nouvelle <strong>Amulette</strong></li>
+          <li>Nouveau <strong>Bracelet</strong></li>
+        </ul>
+        <div class="sub-header">🌿 Set de la Sylve</div>
+        <ul>
+          <li>Nouvel <strong>Anneau</strong></li>
+        </ul>
+        <div class="sub-header">🐂 Set des Taureaux</div>
+        <ul>
+          <li>Nouvelle <strong>Bague</strong></li>
+          <li>Nouvelle <strong>Amulette</strong></li>
+        </ul>
+        <div class="sub-header">🛒 Marchands & Accessoires</div>
+        <ul>
+          <li>Nouveau Marchand d'Accessoires à <strong>Vallhat</strong></li>
+          <li>Nouveau Marchand d'Accessoires à <strong>Tolbana</strong></li>
+          <li>Nouveaux Accessoires au marchand de la <strong>Ville de départ (Palier 1)</strong></li>
+        </ul>
+        <div class="sub-header">🔮 Items Mystérieux</div>
+        <ul>
+          <li>Nouveaux <strong>Anneaux</strong> → Ĭ̶̠ţ̸͘ę̸̈m̵̰̂ Ï̷̫ņ̴̆c̷̣͠o̷̟͌n̸͎̐nu</li>
+          <li>Nouveaux <strong>Bracelets</strong> → Ĭ̶̠ţ̸͘ę̸̈m̵̰̂ Ï̷̫ņ̴̆c̷̣͠o̷̟͌n̸͎̐nu</li>
+          <li>Nouveaux <strong>Artefacts</strong> → Ĭ̶̠ţ̸͘ę̸̈m̵̰̂ Ï̷̫ņ̴̆c̷̣͠o̷̟͌n̸͎̐nu</li>
+          <li>Nouvelles <strong>Amulettes</strong> → Ĭ̶̠ţ̸͘ę̸̈m̵̰̂ Ï̷̫ņ̴̆c̷̣͠o̷̟͌n̸͎̐nu</li>
+          <li>Nouveaux <strong>Gants</strong> → Ĭ̶̠ţ̸͘ę̸̈m̵̰̂ Ï̷̫ņ̴̆c̷̣͠o̷̟͌n̸͎̐nu</li>
+        </ul>
+        <div class="sub-header">🗿 Divers</div>
+        <ul>
+          <li>Des <strong>mannequins</strong> apparaissent en ville : Tolbana, Ville de Départ et Hanaka</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- BUFFS -->
+    <section class="section buff">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-icon">📈</span>
+        <span class="section-title">Buffs</span>
+        <span class="section-count">Mage / Assassin / Items</span>
+        <span class="section-chevron">▼</span>
+      </div>
+      <div class="section-body">
+        <div class="sub-header">💍 Anneaux</div>
+        <div class="skill-name">Anneau Pumba</div>
+        <div class="stat-block">
+          Santé &nbsp;&nbsp;&nbsp;&nbsp;: 7 &nbsp;<span class="arrow">→</span>&nbsp; <span class="val-new">10</span><br>
+          Défense &nbsp;: 0.7 <span class="arrow">→</span>&nbsp; <span class="val-new">1</span>
+        </div>
+
+        <div class="sub-header">⚔️ Armes</div>
+        <ul>
+          <li>Toutes les <strong>faux</strong> → <strong>+2 de dégâts de base</strong></li>
+        </ul>
+
+        <div class="sub-header">🛡️ Sets</div>
+        <div class="skill-name">Loup Faiblard</div>
+        <ul>
+          <li><strong>[2]</strong> : Déplacé la vitesse de déplacement de [3] vers [2]</li>
+          <li><strong>[3]</strong> : Ajout de <strong>+0.1 Vitesse d'Attaque</strong></li>
+        </ul>
+
+        <div class="sub-header">🧙 Mage</div>
+        <div class="skill-name">Frappe de Téléportation</div>
+        <div class="stat-block">
+          Dégâts / niveau &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: +5/lvl &nbsp;&nbsp;<span class="arrow">→</span>&nbsp; <span class="val-new">+7/lvl</span><br>
+          Durée étourdissement / niveau : +0.1/lvl <span class="arrow">→</span>&nbsp; <span class="val-new">+0.2/lvl</span>
+        </div>
+
+        <div class="skill-name">Givre Perçant</div>
+        <div class="stat-block">
+          Dégâts de base &nbsp;&nbsp;: 40 &nbsp;&nbsp;&nbsp;&nbsp;<span class="arrow">→</span>&nbsp; <span class="val-new">50</span><br>
+          Dégâts / niveau : +8/lvl <span class="arrow">→</span>&nbsp; <span class="val-new">+10/lvl</span><br>
+          Cooldown de base : 20s &nbsp;&nbsp;&nbsp;<span class="arrow">→</span>&nbsp; <span class="val-new">18s</span>
+        </div>
+
+        <div class="sub-header">🗡️ Assassin</div>
+        <div class="skill-name">Combo Mortel</div>
+        <div class="stat-block">
+          Dégâts de base &nbsp;&nbsp;: 15 <span class="arrow">→</span>&nbsp; <span class="val-new">1</span><br>
+          Scaling / niveau : 3 &nbsp;<span class="arrow">→</span>&nbsp; <span class="val-new">2</span>
+        </div>
+        <div class="callout">🆕 Le combo s'active automatiquement au <strong>clic gauche</strong> avec un poignard (plus besoin de le binder)</div>
+
+        <div class="skill-name">Ruée Ravageur</div>
+        <div class="stat-block">
+          Dégâts / niveau &nbsp;&nbsp;: +3/lvl &nbsp;&nbsp;<span class="arrow">→</span>&nbsp; <span class="val-new">+5/lvl</span><br>
+          Cooldown de base &nbsp;: 8s &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="arrow">→</span>&nbsp; <span class="val-new">7s</span><br>
+          Cooldown / niveau : -0.2/lvl <span class="arrow">→</span>&nbsp; <span class="val-new">-0.1/lvl</span>
+        </div>
+
+        <div class="skill-name">Floraison de la Mort</div>
+        <div class="stat-block">
+          Dégâts / niveau &nbsp;&nbsp;: +5/lvl &nbsp;&nbsp;<span class="arrow">→</span>&nbsp; <span class="val-new">+6/lvl</span><br>
+          Cooldown de base &nbsp;: 12s &nbsp;&nbsp;&nbsp;&nbsp;<span class="arrow">→</span>&nbsp; <span class="val-new">11s</span><br>
+          Cooldown / niveau : -0.2/lvl <span class="arrow">→</span>&nbsp; <span class="val-new">-0.1/lvl</span>
+        </div>
+
+        <div class="skill-name">Tremblement Obscur</div>
+        <div class="stat-block">
+          Cooldown de base : 15s <span class="arrow">→</span>&nbsp; <span class="val-new">14s</span>
+        </div>
+
+        <div class="skill-name">Dernière Danse</div>
+        <div class="stat-block">
+          Dégâts / niveau : +25/lvl <span class="arrow">→</span>&nbsp; <span class="val-new">+35/lvl</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- NERFS -->
+    <section class="section nerf">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-icon">📉</span>
+        <span class="section-title">Nerfs</span>
+        <span class="section-count">Mage / Assassin / Sets</span>
+        <span class="section-chevron">▼</span>
+      </div>
+      <div class="section-body">
+        <div class="sub-header">🛡️ Sets</div>
+        <div class="skill-name">Squelette Poussiéreux</div>
+        <div class="stat-block">
+          [2] Hâte d'Aptitude : 10% <span class="arrow">→</span>&nbsp; <span class="val-new">5%</span>
+        </div>
+
+        <div class="sub-header">🧙 Mage</div>
+        <div class="skill-name">Frappe de Téléportation</div>
+        <div class="stat-block">
+          Mana / niveau : +0.3/lvl <span class="arrow">→</span>&nbsp; <span class="val-new">+2/lvl</span>
+        </div>
+        <div class="skill-name">Barrage Flamboyant</div>
+        <div class="stat-block">
+          Mana / niveau : +2/lvl <span class="arrow">→</span>&nbsp; <span class="val-new">+3/lvl</span>
+        </div>
+        <div class="skill-name">Prison Cryogénique</div>
+        <div class="stat-block">
+          Mana de base &nbsp;: 15 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="arrow">→</span>&nbsp; <span class="val-new">18</span><br>
+          Mana / niveau : +1.5/lvl <span class="arrow">→</span>&nbsp; <span class="val-new">+2/lvl</span>
+        </div>
+        <div class="skill-name">Givre Perçant</div>
+        <div class="stat-block">
+          Mana de base &nbsp;: 20 &nbsp;&nbsp;&nbsp;<span class="arrow">→</span>&nbsp; <span class="val-new">22</span><br>
+          Mana / niveau : +1/lvl <span class="arrow">→</span>&nbsp; <span class="val-new">+3/lvl</span>
+        </div>
+
+        <div class="sub-header">🗡️ Assassin</div>
+        <div class="skill-name">Dernière Danse</div>
+        <div class="stat-block">
+          Stamina / niveau : +5/lvl <span class="arrow">→</span>&nbsp; <span class="val-new">+10/lvl</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORRECTIFS -->
+    <section class="section fix">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-icon">🔧</span>
+        <span class="section-title">Correctifs</span>
+        <span class="section-count">9 fixes</span>
+        <span class="section-chevron">▼</span>
+      </div>
+      <div class="section-body">
+        <ul>
+          <li>Crashs liés au <strong>Kobold</strong> <em>(sous surveillance)</em></li>
+          <li><strong>Passif du Mage</strong> <em>(sous surveillance)</em></li>
+          <li>Items consommables d'accès aux <strong>cosmétiques Saint-Valentin</strong></li>
+          <li>Textures de l'armure du <strong>donjon Nécro</strong></li>
+          <li>Les Assassins sont désormais bien <strong>immortels</strong> pendant <em>"Floraison Mortelle"</em></li>
+          <li>Hitbox du skill <em>"Tourbillon Implacable"</em> du Guerrier</li>
+          <li>Hitbox du skill <em>"Frappe Vicieuse"</em> du Guerrier</li>
+          <li>Le <strong>Totem des Shamans</strong> n'apparaît plus dans le sol</li>
+          <li>Le Totem en mode <strong>Foudre</strong> ne cible plus les alliés</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- AJUSTEMENTS -->
+    <section class="section adjust">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-icon">⚙️</span>
+        <span class="section-title">Ajustements</span>
+        <span class="section-count">25+ changements</span>
+        <span class="section-chevron">▼</span>
+      </div>
+      <div class="section-body">
+        <div class="sub-header">📝 Général</div>
+        <ul>
+          <li>Ajustements de traduction sur <strong>tous les sets</strong> (normalisation des stats)</li>
+          <li>Le loot partagé <strong>valide les conditions de quête</strong> pour tous les joueurs</li>
+          <li>Mise à jour des <strong>lores des skills</strong> de toutes les classes</li>
+          <li>Ajustements des <strong>tooltips</strong> des skills</li>
+          <li>Corrections du <strong>lore de certains items</strong></li>
+          <li>Les <strong>cristaux</strong> ne sont plus stackables</li>
+          <li>Le cooldown sur les <strong>coups critiques des armes</strong> → enlevé</li>
+          <li>Le cooldown sur les <strong>coups critiques des compétences</strong> → enlevé</li>
+        </ul>
+
+        <div class="sub-header">⚔️ Guerrier</div>
+        <ul>
+          <li>Désormais <strong>immortel</strong> pendant la canalisation de son ultime</li>
+          <li>Le <em>Tourbillon Implacable</em> ne force plus à avancer pendant les coups circulaires</li>
+          <li>La <em>Frappe Vicieuse</em> → <strong>étourdissement de 3s</strong> aux ennemis après leur chute</li>
+          <li>L'ultime fait simplement <strong>écraser son épée spirituelle au sol</strong> (plus de bond)</li>
+          <li>Optimisation des hitbox de l'ultime</li>
+        </ul>
+
+        <div class="sub-header">🗡️ Assassin</div>
+        <ul>
+          <li>Désormais <strong>immortel</strong> pendant l'attaque en vol de son ultime</li>
+        </ul>
+
+        <div class="sub-header">🔮 Shaman</div>
+        <ul>
+          <li>Nouvelles animations du Totem (fin de la sphère de particules gourmande)</li>
+          <li>Performances du Totem <strong>réduites par x15</strong></li>
+          <li>Particules du <strong>passif</strong> légèrement plus visibles</li>
+          <li>Particules du Totem <strong>Foudre</strong> nettement plus visibles</li>
+          <li>L'Ultime → <strong>soulève pendant 1s</strong> + <strong>immortalité 5s</strong> (ne bloque plus en l'air)</li>
+          <li>Un Shaman ne peut <strong>pas s'auto-affecter</strong> par son propre ultime <em>(peut-être modifié)</em></li>
+        </ul>
+
+        <div class="sub-header">🔗 Réassignations de Sets</div>
+        <div class="stat-block">
+          Bague de Narax &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="arrow">→</span> Squelette Poussiéreux<br>
+          Collier du Gardien &nbsp;<span class="arrow">→</span> Squelette Poussiéreux<br>
+          Lien de la Sylve &nbsp;&nbsp;&nbsp;<span class="arrow">→</span> De la Sylve<br>
+          Amulette des Bois &nbsp;&nbsp;<span class="arrow">→</span> De la Sylve<br>
+          Bracelet Sylvestre &nbsp;<span class="arrow">→</span> De la Sylve<br>
+          Talisman Féroce &nbsp;&nbsp;&nbsp;&nbsp;<span class="arrow">→</span> Taureau<br>
+          Anneau Gluant &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="arrow">→</span> Slime
+        </div>
+
+        <div class="sub-header">💰 Prix des Parchemins</div>
+        <div class="stat-block">
+          Réallocation : <span class="val-new">750 cols</span><br>
+          Maîtrise &nbsp;&nbsp;&nbsp;&nbsp;: <span class="val-new">750 cols</span><br>
+          Changement &nbsp;&nbsp;: <span class="val-new">1 500 cols</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTES DU STAFF -->
+    <section class="section staff">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-icon">📣</span>
+        <span class="section-title">Notes du Staff</span>
+        <span class="section-count">3 notes</span>
+        <span class="section-chevron">▼</span>
+      </div>
+      <div class="section-body">
+        <div class="staff-note">
+          <div class="name">🎮 NerfS_</div>
+          Pour le combo des classes Guerrier et Assassin, tout est une question d'<strong>optimisation et d'équilibrage</strong>. C'était très compliqué d'offrir au combo une réelle utilité tout en l'équilibrant. De plus, le fonctionnement de Minecraft bloquait beaucoup de possibilités. Des <strong>vidéos explicatives</strong> accompagnent ce Changelog.<br><br>
+          <em>Je travaille actuellement sur l'économie, les ressources (blé, bois), le P3, les outils, les classes, et le rework de la Tisseuse et de Taurus.</em>
+        </div>
+        <div class="staff-note">
+          <div class="name">🎣 Deonata</div>
+          <em>Je suis sur la <strong>pêche</strong> — le rework est bientôt fini, il manque la gestion de récupération d'items et XP. Il faut aussi mettre en place des zones/tiers pour certains ajouts.</em>
+        </div>
+        <div class="staff-note">
+          <div class="name">🍎 Compote</div>
+          <em>À venir…</em>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <!-- FIN CHANGELOG 05/03 -->
+
+</div>
+
+<script>
+  // Toggle sections
+  function toggleSection(header) {
+    header.parentElement.classList.toggle('collapsed');
+  }
+
+  // Build navigation from changelog entries
+  function initNav() {
+    const nav = document.getElementById('nav');
+    const changelogs = document.querySelectorAll('.changelog');
+
+    changelogs.forEach((cl, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'nav-btn' + (i === 0 ? ' active' : '');
+      btn.textContent = cl.dataset.label;
+      btn.onclick = () => {
+        document.querySelectorAll('.changelog').forEach(c => c.classList.remove('active'));
+        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+        cl.classList.add('active');
+        btn.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      };
+      nav.appendChild(btn);
+    });
+
+    // Show first changelog
+    if (changelogs.length > 0) changelogs[0].classList.add('active');
+  }
+
+  initNav();
+</script>
+
+</body>
+</html>
