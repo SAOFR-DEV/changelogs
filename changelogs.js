@@ -248,6 +248,7 @@ const CHANGELOGS = [
           <div class="sub-header">🗡️ Assassin</div>
           <ul>
             <li>Désormais <strong>immortel</strong> pendant l'attaque en vol de son ultime</li>
+            <li>Le <strong>passif</strong> est décidé de manière théorique mais encore en cours de confection — il est <strong>désactivé temporairement</strong>, sa nouvelle version arrivera prochainement</li>
           </ul>
 
           <div class="sub-header">🔮 Shaman</div>
@@ -295,7 +296,7 @@ const CHANGELOGS = [
           </div>
           <div class="staff-note">
             <div class="name">🍎 Compote</div>
-            Je travaille sur plusieurs systèmes back-end :<br><br>
+            Les nouveaux plugins internes :<br><br>
             <strong>HDV (zap-auctions)</strong> — Hôtel des Ventes multi-serveur. Mettez en vente vos objets avec <strong>/ah sell &lt;prix&gt;</strong>, parcourez le marché avec <strong>/ah</strong> (alias <strong>/hdv</strong>), recherchez des items avec <strong>/ah search</strong>, et consultez votre historique de ventes. Tout est synchronisé entre les serveurs.<br><br>
             <strong>Économie (zap-economy)</strong> — Nouveau système de monnaie synchronisé. Consultez votre solde avec <strong>/money</strong>, envoyez des cols avec <strong>/pay</strong>.<br><br>
             <strong>Chat (zap-chat)</strong> — Chat global unifié entre tous les palier. Messages privés avec <strong>/msg</strong>.
