@@ -278,6 +278,22 @@ const CHANGELOGS = [
             Réallocation : <span class="val-new">750 cols</span><br>
             Maîtrise &nbsp;&nbsp;&nbsp;&nbsp;: <span class="val-new">750 cols</span><br>
             Changement &nbsp;&nbsp;: <span class="val-new">1 500 cols</span>
+          </div>
+
+          <div class="sub-header">🎬 Vidéos des changements</div>
+          <div class="video-grid">
+            <div class="video-card">
+              <video controls preload="metadata"><source src="https://cdn.discordapp.com/attachments/1452789664682475692/1479228217070977178/NewGuerrier.mp4?ex=69ab4621&is=69a9f4a1&hm=554a1ec43d9f6bf20caa3bb3d3ab1ceb661d48363090153895d1f831845603d0&" type="video/mp4"></video>
+              <div class="video-label">Guerrier</div>
+            </div>
+            <div class="video-card">
+              <video controls preload="metadata"><source src="https://cdn.discordapp.com/attachments/1452789664682475692/1479228164591849562/NewAssassin.mp4?ex=69ab4615&is=69a9f495&hm=54aff4a6ad0bf9a3e88ee92f705c4d3f83161e672351c27f1ed1264471c0d5e1&" type="video/mp4"></video>
+              <div class="video-label">Assassin</div>
+            </div>
+            <div class="video-card">
+              <video controls preload="metadata"><source src="https://cdn.discordapp.com/attachments/1452789664682475692/1479228195864838154/NewShaman.mp4?ex=69ab461c&is=69a9f49c&hm=1366b8d8dde589c2ecb555b09d0391ccda1fb46fb837fdb5d5d4ac81ee8fd69e&" type="video/mp4"></video>
+              <div class="video-label">Shaman</div>
+            </div>
           </div>`
       },
       {
