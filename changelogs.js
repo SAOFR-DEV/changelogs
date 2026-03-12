@@ -13,6 +13,101 @@
 
 const CHANGELOGS = [
   {
+    date: "12/03/2026",
+    label: "12 Mars 2026",
+    sections: [
+      {
+        type: "important",
+        icon: "⚔️",
+        title: "Importants",
+        count: "2 changements",
+        content: `
+          <ul>
+            <li>Le premier <strong>World Boss</strong> de l'Aincrad va bientôt faire rage sur le palier 1 <em>(Dimanche 20h)</em></li>
+          </ul>
+          <div class="sub-header">🏆 Système de loot du World Boss</div>
+          <ul>
+            <li><strong>1 loot</strong> pour tous à la fin de la mort du boss</li>
+            <li><strong>1 loot</strong> pour ceux ayant combattu et remplissant les conditions de dégâts <em>(1500 dmg)</em></li>
+            <li><strong>1 coffre de fin</strong>, où chacun fait tourner sa chance</li>
+          </ul>
+          <div class="sub-header">⚠️ AOE</div>
+          <ul>
+            <li>Les <strong>AOE</strong> sont désormais présents au sein des paliers, faites attention, un coup de pioche ça fait très mal...</li>
+          </ul>`
+      },
+      {
+        type: "add",
+        icon: "✨",
+        title: "Nouveautés",
+        count: "4 ajouts",
+        content: `
+          <ul>
+            <li>Les <strong>Marchands Ambulants</strong> sont désormais bel et bien présents</li>
+            <li><strong>Amulette Taureau</strong> achetable au Marchand de Kaelor</li>
+            <li>Nouveau <strong>ressource pack</strong>, redémarrez votre launcher</li>
+          </ul>
+          <div class="sub-header">🔮 Shaman</div>
+          <ul>
+            <li>En fonction de votre distance et de la position choisie pour votre totem, la <strong>vitesse sera impactée</strong></li>
+          </ul>`
+      },
+      {
+        type: "fix",
+        icon: "🔧",
+        title: "Correctifs",
+        count: "4 fixes",
+        content: `
+          <ul>
+            <li>Le <strong>forgeron de lingot de fer</strong> est de nouveau présent</li>
+            <li>Le <strong>totem</strong> apparaît désormais bien plus vite</li>
+            <li>Le combo du <strong>guerrier</strong> suit désormais la direction du regard du joueur et permet d'attaquer les cibles volantes assez proches du sol</li>
+            <li>Le combo de l'<strong>assassin</strong> suit désormais la direction du regard du joueur aussi</li>
+          </ul>`
+      },
+      {
+        type: "adjust",
+        icon: "⚙️",
+        title: "Ajustements",
+        count: "2 changements",
+        content: `
+          <ul>
+            <li>Indication dans le <strong>lore des skills</strong> si ils sont bindable ou non</li>
+            <li>Optimisation du <strong>totem des shamans</strong> en forme de heal — encore plus optimisé et évite de bloquer la vue avec des particules au milieu de l'écran</li>
+          </ul>
+          <div class="sub-header">🎬 Vidéos des changements</div>
+          <div class="video-grid">
+            <div class="video-card">
+              <video controls preload="metadata"><source src="https://cdn.discordapp.com/attachments/1385998857464185054/1481743279723909282/2026-03-12_20-43-49.mp4?ex=69b46c77&is=69b31af7&hm=d666457cc8fd74adf7bf4a88cc9b44edd5bafa1fe1acbe37ee0db02699779b1f&" type="video/mp4"></video>
+              <div class="video-label">Combo Guerrier</div>
+            </div>
+            <div class="video-card">
+              <video controls preload="metadata"><source src="https://cdn.discordapp.com/attachments/1385998857464185054/1481743327110889612/2026-03-12_20-53-20.mp4?ex=69b46c82&is=69b31b02&hm=3093834fa772b491577ac0098099f23b0c7b3432db1a11496a3fe33cfb9b5286&" type="video/mp4"></video>
+              <div class="video-label">Combo Assassin</div>
+            </div>
+          </div>`
+      },
+      {
+        type: "staff",
+        icon: "📣",
+        title: "Notes du Staff",
+        count: "NerfS_",
+        content: `
+          <div class="staff-note">
+            <div class="name">🎮 NerfS_</div>
+            Avec le nouveau système de donjon développé par <strong>Perrier</strong>, une grosse update l'accompagnera, modifiant certains aspects des donjons autres que ce qu'il se déroule à l'intérieur.<br><br>
+            Je travaille toujours sur le <strong>P3</strong>, aucun soucis de ce côté là.<br><br>
+            D'autres ajouts/modifications vont avoir lieu dans les prochaines semaines concernant l'<strong>économie</strong>.<br><br>
+            <strong>Deonata</strong> a développé une grande partie concernant la pêche et l'intérêt du métier de récolte de chasseur. Le rework des métiers avance bien, il devrait arriver dans les prochaines semaines.
+            <div class="callout">🎁 Code : <strong>Deonata10</strong></div>
+            <strong>Pass héroïque</strong> → 80%, bientôt fini, peut arriver ce week-end.<br><br>
+            Les <strong>skills combo</strong> (guerrier et assassin) affectés par la range de base des armes arrivent prochainement.<br><br>
+            <em>Bon jeu à tous</em>
+          </div>`
+      }
+    ]
+  },
+  {
     date: "05/03/2025",
     label: "05 Mars 2025",
     sections: [
