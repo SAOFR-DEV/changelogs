@@ -13,6 +13,102 @@
 
 const CHANGELOGS = [
   {
+    date: "17/03/2026",
+    label: "17 Mars 2026",
+    sections: [
+      {
+        type: "important",
+        icon: "⚔️",
+        title: "Importants",
+        count: "3 changements",
+        content: `
+          <div class="sub-header">🐉 World Boss Kazor — Marchand</div>
+          <ul>
+            <li>Le World Boss <strong>Kazor</strong> possède un <strong>marchand à son honneur</strong>, permettant d'acheter un ensemble exclusif</li>
+            <li>La monnaie d'achat est une <strong>matière première</strong> obtenue en participant à l'élimination du boss</li>
+            <li>Le marchand est présent en prod mais ne présente pas encore l'ensemble des items achetables — ce sera le cas avant la prochaine apparition de Kazor</li>
+          </ul>
+          <div class="sub-header">⚠️ Mise à jour des items</div>
+          <ul>
+            <li>Des ajustements, fix et ajouts concernant l'<strong>équilibrage des items</strong> et leurs statistiques ont été faits</li>
+            <li>Si vos items ne donnent plus aucune stats, veuillez les mettre à jour par un <strong>changement de slot</strong> ou un <strong>drop au sol</strong> suivi d'une récupération</li>
+          </ul>
+          <div class="sub-header">🎁 Compensation</div>
+          <ul>
+            <li>Un <strong>PNJ de compensation</strong> face à la première apparition du World Boss Kazor sera disponible à l'entrée de la zone de Kazor</li>
+          </ul>`
+      },
+      {
+        type: "add",
+        icon: "✨",
+        title: "Nouveautés",
+        count: "2 ajouts",
+        content: `
+          <div class="sub-header">🔮 Runes Remover</div>
+          <ul>
+            <li>Les <strong>Runes Remover</strong> permettant d'enlever X nombre de runes selon sa rareté sont implémentés en jeu</li>
+            <li>Obtenables en affrontant <strong>Kazor</strong> ou en achetant à son marchand — d'autres manières d'obtention arriveront</li>
+          </ul>
+          <div class="sub-header">⛏️ Nouveau système de Nodes</div>
+          <ul>
+            <li>Nouveau <strong>système de nodes</strong> pour les minerais et le bois</li>
+            <li>Vous pouvez maintenant miner vos minerais <strong>sans que les autres joueurs vous dérangent</strong> — c'est client side</li>
+            <li>S'accompagne d'une <strong>refonte visuelle</strong> complète</li>
+          </ul>`
+      },
+      {
+        type: "fix",
+        icon: "🔧",
+        title: "Correctifs",
+        count: "6 fixes",
+        content: `
+          <ul>
+            <li>Bug des <strong>statistiques dupliquées</strong></li>
+            <li>Tentative de correctif sur les <strong>crash donjons</strong> causés par le Kobold</li>
+            <li>Bouton invisible <strong>mount</strong> présent dans le SAOUI</li>
+            <li>Stats des <strong>gants</strong> dysfonctionnels</li>
+            <li>Commande <strong>/pets|mounts menu</strong> pour accéder à son pet à distance</li>
+            <li><strong>Passif mage</strong> qui rend invincible d'une autre manière</li>
+          </ul>`
+      },
+      {
+        type: "adjust",
+        icon: "⚙️",
+        title: "Ajustements",
+        count: "7 changements",
+        content: `
+          <ul>
+            <li>Si vous découvrez la ville <strong>Urbus</strong>, votre point de spawn y sera placé — à chaque mort vous retournez à Urbus</li>
+            <li>Attaques des <strong>archers</strong> passent à travers les joueurs</li>
+            <li>Attaques des <strong>mages</strong> passent à travers les joueurs</li>
+            <li>Les <strong>curseurs des joueurs</strong> sont de nouveau visibles dans l'eau</li>
+            <li>Totem <strong>Shaman</strong> dans le sol — corrigé</li>
+            <li>Totem <strong>Shaman</strong> qui spawn plus loin que prévu — corrigé</li>
+          </ul>
+          <div class="sub-header">🔮 Shaman</div>
+          <ul>
+            <li>Si vous lancez votre totem <strong>trop loin (+16 blocs)</strong>, vous regagnez votre mana perdu <em>(cooldown impossible)</em> + message d'indication</li>
+          </ul>
+          <div class="sub-header">🖥️ Optimisation</div>
+          <ul>
+            <li>Optimisation côté des <strong>plugins et serveurs</strong></li>
+          </ul>`
+      },
+      {
+        type: "staff",
+        icon: "📣",
+        title: "Notes du Staff",
+        count: "NerfS_",
+        content: `
+          <div class="staff-note">
+            <div class="name">🎮 NerfS_</div>
+            Travaille toujours sur le <strong>P3</strong>, <strong>métiers</strong>, <strong>battle pass</strong>, <strong>rework mini-boss P2</strong> et <strong>world boss P2</strong>.<br><br>
+            <em>Bon jeu à tous, merci de votre confiance</em>
+          </div>`
+      }
+    ]
+  },
+  {
     date: "12/03/2026",
     label: "12 Mars 2026",
     sections: [
