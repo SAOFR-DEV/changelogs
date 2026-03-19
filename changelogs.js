@@ -24,14 +24,14 @@ const CHANGELOGS = [
         content: `
           <div class="sub-header">🎮 SAO X EARTH LEVELING</div>
           <ul>
-            <li>Malheureusement, l'événement va être <strong>reporté à la semaine prochaine</strong> minimum</li>
-            <li><strong>&lt;@185827598436139008&gt;</strong> a des perturbations IRL et se voit être indisponible jusqu'à la semaine prochaine</li>
+            <li>Malheureusement, l'événement va être reporté à la semaine prochaine minimum</li>
+            <li>&lt;@185827598436139008&gt; a des perturbations IRL et se voit être indisponible jusqu'à la semaine prochaine</li>
             <li>Mille excuses pour cela</li>
           </ul>
           <div class="sub-header">🐉 WORLDBOSS</div>
           <ul>
-            <li>Le <strong>marchand de Kazor</strong> vous permet d'accéder à l'entièreté de son magasin</li>
-            <li>Les <strong>Pièces de Kazor</strong> sont la matière première que drop le boss à son élimination en remplissant les conditions <em>(1k5 dmg)</em></li>
+            <li>Le marchand de Kazor vous permet d'accéder a l'entièreté de son magasin</li>
+            <li>Les Pièces de Kazor sont la matière première que drop le boss à son élimination en remplissant les conditions (1k5 dmg)</li>
           </ul>`
       }
     ]
