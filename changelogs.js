@@ -13,6 +13,30 @@
 
 const CHANGELOGS = [
   {
+    date: "19/03/2026",
+    label: "19 Mars 2026",
+    sections: [
+      {
+        type: "important",
+        icon: "🔻",
+        title: "Importants",
+        count: "2 informations",
+        content: `
+          <div class="sub-header">🎮 SAO X EARTH LEVELING</div>
+          <ul>
+            <li>Malheureusement, l'événement va être <strong>reporté à la semaine prochaine</strong> minimum</li>
+            <li><strong>NerfS_</strong> a des perturbations IRL et se voit être indisponible jusqu'à la semaine prochaine</li>
+            <li>Mille excuses pour cela</li>
+          </ul>
+          <div class="sub-header">🐉 WORLDBOSS</div>
+          <ul>
+            <li>Le <strong>marchand de Kazor</strong> vous permet d'accéder à l'entièreté de son magasin</li>
+            <li>Les <strong>Pièces de Kazor</strong> sont la matière première que drop le boss à son élimination en remplissant les conditions <em>(1 500 dmg)</em></li>
+          </ul>`
+      }
+    ]
+  },
+  {
     date: "17/03/2026",
     label: "17 Mars 2026",
     sections: [
