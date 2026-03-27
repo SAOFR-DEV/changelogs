@@ -107,6 +107,28 @@ const CHANGELOGS = [
           </div>`
       },
       {
+        type: "add",
+        icon: "✨",
+        title: "Mise à jour HDV",
+        count: "3 changements",
+        content: `
+          <div class="sub-header">🔧 Anti-abus clients uniques</div>
+          <ul>
+            <li>Ajustement du système de clients uniques pour lutter contre le <strong>farm de rangs</strong> via des ventes à bas prix</li>
+            <li>Un acheteur doit désormais avoir dépensé minimum <strong>500 cols</strong> chez un vendeur dans la même journée pour être comptabilisé comme client unique</li>
+          </ul>
+          <div class="stat-block">
+            ❌ Vendre 50 viandes à 10 col → ça ne donne plus aucun client unique<br>
+            ✅ Vendre un vrai item à 500+ cols → le client compte normalement
+          </div>
+          <div class="callout">⚠️ Vos rangs actuels peuvent changer s'ils étaient basés sur du farm d'items à bas prix.</div>
+          <div class="sub-header">✨ Nouvelles commandes</div>
+          <ul>
+            <li><strong>/ah history search [nom]</strong> — Rechercher l'historique des ventes d'un objet pour vérifier les prix avant de mettre en vente</li>
+            <li><strong>/ah history [pseudo]</strong> — Consulter l'historique personnel d'un joueur</li>
+          </ul>`
+      },
+      {
         type: "adjust",
         icon: "⚙️",
         title: "Ajustements",
