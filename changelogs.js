@@ -249,6 +249,162 @@ const CHANGELOGS = [
     ]
   },
   {
+    date: "19/03/2026",
+    label: "19 Mars 2026",
+    sections: [
+      {
+        type: "important",
+        icon: "⚔️",
+        title: "Importants",
+        count: "4 changements",
+        content: `
+          <div class="sub-header">🌍 SAO x Earth Leveling</div>
+          <ul>
+            <li>L'événement est <strong>reporté à la semaine prochaine minimum</strong> — La_Compote_ a des perturbations IRL. Mille excuses pour cela</li>
+          </ul>
+          <div class="sub-header">🐉 World Boss Kazor</div>
+          <ul>
+            <li>Le <strong>marchand de Kazor</strong> vous permet d'accéder à l'entièreté de son magasin</li>
+            <li>Les <strong>Pièces de Kazor</strong> sont la matière première droppée par le boss en remplissant les conditions <em>(1k5 dmg)</em></li>
+          </ul>
+          <div class="callout">🚨 Désormais, le World Boss de dimanche aura lieu à <strong>18h</strong></div>
+          <div class="sub-header">🎁 Compensation</div>
+          <ul>
+            <li>La compensation suite à la première tentative avec le World Boss <em>(15/03)</em> est arrivée auprès d'<strong>Hagil</strong></li>
+          </ul>
+          <div class="sub-header">⚠️ Items</div>
+          <ul>
+            <li>De nombreux items ont été modifiés (optimisation)</li>
+            <li>Si vous observez des dysfonctionnements de stats → mettez à jour vos items en changeant de slot ou via un <strong>drop au sol</strong> + récupération</li>
+          </ul>`
+      },
+      {
+        type: "add",
+        icon: "✨",
+        title: "Nouveautés",
+        count: "1 ajout",
+        content: `
+          <ul>
+            <li>Une <strong>torche</strong> est désormais achetable aux marchands d'outils de niveau 1 <em>(exemple : ville de départ)</em></li>
+          </ul>`
+      },
+      {
+        type: "buff",
+        icon: "📈",
+        title: "Équilibrage",
+        count: "6 catégories",
+        content: `
+          <div class="sub-header">🗿 Artefacts</div>
+          <div class="skill-name">Bouclier Noir</div>
+          <div class="stat-block">
+            Santé &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 5 &nbsp;&nbsp;&nbsp;&nbsp;<span class="arrow">→</span> <span class="val-new">15</span><br>
+            Maîtrise de blocage &nbsp;&nbsp;&nbsp;: 2.5% &nbsp;<span class="arrow">→</span> <span class="val-new">3%</span><br>
+            <span class="val-new">[NOUVEAU]</span> Puissance de blocage : <span class="val-new">1%</span><br>
+            Dégâts d'attaque &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: -7.5 &nbsp;<span class="arrow">→</span> <span class="val-new">-3.5</span><br>
+            Stamina &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: -2.5 &nbsp;<span class="arrow">→</span> <span class="val-new">2</span><br>
+            Taux de drop &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 1% &nbsp;&nbsp;&nbsp;<span class="arrow">→</span> <span class="val-new">4%</span>
+          </div>
+          <div class="skill-name">Masque Occulte</div>
+          <div class="stat-block">
+            <span class="val-new">[NOUVEAU]</span> Puissance de Blocage : <span class="val-new">2.5%</span>
+          </div>
+          <div class="skill-name">Plume Écarlate</div>
+          <div class="stat-block">
+            <span class="val-new">[NOUVEAU]</span> Puissance de Blocage : <span class="val-new">0.5%</span>
+          </div>
+
+          <div class="sub-header">💍 Amulettes</div>
+          <div class="skill-name">Collier du Gardien</div>
+          <div class="stat-block">
+            Mana &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 5 &nbsp;&nbsp;<span class="arrow">→</span> <span class="val-new">15</span><br>
+            Stamina &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 5 &nbsp;&nbsp;<span class="arrow">→</span> <span class="val-new">7.5</span><br>
+            <span class="val-new">[NOUVEAU]</span> Régénération de Stamina : <span class="val-new">0.2</span><br>
+            <span class="val-new">[NOUVEAU]</span> Régénération de Mana &nbsp;&nbsp;&nbsp;: <span class="val-new">0.4</span><br>
+            Taux de drop &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 1% <span class="arrow">→</span> <span class="val-new">4%</span>
+          </div>
+          <div class="skill-name">Collier Tricolore</div>
+          <div class="stat-block">
+            <span class="val-new">[NOUVEAU]</span> Puissance de Blocage : <span class="val-new">0.5%</span>
+          </div>
+
+          <div class="sub-header">🔮 Runes</div>
+          <div class="skill-name">Rune du Colosse</div>
+          <div class="stat-block">
+            Dégât magique &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: -5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="arrow">→</span> <span class="val-new">-3.5</span><br>
+            Dégât physique &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: -5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="arrow">→</span> <span class="val-new">-3.5</span><br>
+            Santé &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: -15 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="arrow">→</span> <span class="val-new">-5</span><br>
+            Stamina &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 2.5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="arrow">→</span> <span class="val-new">3</span><br>
+            Régénération de Santé &nbsp;: 0.25/s &nbsp;&nbsp;&nbsp;<span class="arrow">→</span> <span class="val-new">0.5/s</span><br>
+            Taux de drop &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 1% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="arrow">→</span> <span class="val-new">2%</span>
+          </div>
+          <div class="skill-name">Rune du Gardien</div>
+          <div class="stat-block">
+            Dégât physique &nbsp;&nbsp;&nbsp;: -10 &nbsp;<span class="arrow">→</span> <span class="val-new">-5</span><br>
+            Skill Crit Chance &nbsp;: 2.5 &nbsp;<span class="arrow">→</span> <span class="val-new">3.5</span><br>
+            Skill Crit Power &nbsp;&nbsp;: 1.25 <span class="arrow">→</span> <span class="val-new">2.5</span><br>
+            Santé &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 10 &nbsp;&nbsp;<span class="arrow">→</span> <span class="val-new">15</span><br>
+            Taux de drop &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 1% &nbsp;&nbsp;<span class="arrow">→</span> <span class="val-new">2%</span>
+          </div>
+
+          <div class="sub-header">💍 Anneaux</div>
+          <div class="skill-name">Anneau de l'Harpie Écrasé</div>
+          <div class="stat-block">
+            <span class="val-new">[NOUVEAU]</span> Puissance de Blocage : <span class="val-new">1%</span>
+          </div>
+
+          <div class="sub-header">🧤 Gants</div>
+          <div class="skill-name">Moufle de Noël Gris</div>
+          <div class="stat-block">
+            <span class="val-new">[NOUVEAU]</span> Puissance de Blocage : <span class="val-new">3%</span>
+          </div>`
+      },
+      {
+        type: "fix",
+        icon: "🔧",
+        title: "Correctifs",
+        count: "2 fixes",
+        content: `
+          <ul>
+            <li>Les <strong>lores des skills</strong> affichent les bonnes statistiques pour toutes les classes</li>
+            <li>Les <strong>hitbox des harpies</strong> de poison, feu et foudre</li>
+          </ul>`
+      },
+      {
+        type: "adjust",
+        icon: "⚙️",
+        title: "Ajustements",
+        count: "9 changements",
+        content: `
+          <div class="sub-header">⚔️ Classes</div>
+          <ul>
+            <li>Les <strong>mages</strong> infligent uniquement des dégâts de compétences et magiques sur leur combo</li>
+            <li>Les <strong>shamans</strong> infligent uniquement des dégâts de compétences et magiques sur leur combo</li>
+            <li>Optimisation FPS du <strong>passif Guerrier</strong> + augmentation de sa visibilité + indicateur : prêt/épuisé/utilisé</li>
+            <li>Optimisation FPS du <strong>passif Mage</strong> + augmentation de sa visibilité + indicateur : brisée/prête</li>
+            <li>Optimisation FPS du <strong>passif Assassin</strong> + augmentation de sa visibilité + indicateur : disponible/activé/épuisée/déclenché</li>
+          </ul>
+          <div class="sub-header">🛡️ Items</div>
+          <ul>
+            <li>Le <strong>Bâton à Lanterne Lunaire</strong> — la description de son skill a été modifiée : il s'agissait de "Dégâts Critique" et non "Chance Critique"</li>
+            <li>Mise à jour des <strong>lores des runes</strong></li>
+          </ul>
+          <div class="sub-header">📊 Stats</div>
+          <div class="stat-block">
+            Délai du blocage : 5s <span class="arrow">→</span> <span class="val-new">3s</span><br>
+            Délai de l'esquive : 3s <span class="arrow">→</span> <span class="val-new">5s</span>
+          </div>
+          <ul>
+            <li>Il n'est plus possible d'obtenir une <strong>statistique d'attaque de base négative</strong></li>
+          </ul>
+          <div class="sub-header">💍 Amulette</div>
+          <div class="skill-name">Collier Tricolore</div>
+          <div class="stat-block">
+            Rareté : Rare <span class="arrow">→</span> <span class="val-new">Epic</span>
+          </div>`
+      }
+    ]
+  },
+  {
     date: "17/03/2026",
     label: "17 Mars 2026",
     sections: [
