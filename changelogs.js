@@ -13,6 +13,242 @@
 
 const CHANGELOGS = [
   {
+    date: "26/03/2026",
+    label: "26 Mars 2026",
+    sections: [
+      {
+        type: "buff",
+        icon: "📈",
+        title: "Équilibrages",
+        count: "5 classes / catégories",
+        content: `
+          <div class="sub-header">⚔️ Guerrier</div>
+          <div class="skill-name">Hache Double Fer</div>
+          <div class="stat-block">
+            DMG : 17-19 <span class="arrow">→</span> <span class="val-new">21-24</span>
+          </div>
+          <div class="skill-name">Marteau Sylvestre</div>
+          <div class="stat-block">
+            DMG : 23 <span class="arrow">→</span> <span class="val-new">29</span><br>
+            AS &nbsp;: 0.8 <span class="arrow">→</span> <span class="val-new">0.7</span>
+          </div>
+          <div class="skill-name">Magical Hammer</div>
+          <div class="stat-block">
+            DMG : 25-30 <span class="arrow">→</span> <span class="val-new">31-38</span><br>
+            AS &nbsp;: 0.8 &nbsp;<span class="arrow">→</span> <span class="val-new">0.7</span>
+          </div>
+          <div class="skill-name">Halberd Fallen</div>
+          <div class="stat-block">
+            DMG : 35 <span class="arrow">→</span> <span class="val-new">44</span>
+          </div>
+          <div class="skill-name">Illfang Axe</div>
+          <div class="stat-block">
+            DMG : 60 <span class="arrow">→</span> <span class="val-new">75</span>
+          </div>
+          <div class="skill-name">Sentinel Mace</div>
+          <div class="stat-block">
+            DMG : 28 <span class="arrow">→</span> <span class="val-new">35</span><br>
+            AS &nbsp;: AS <span class="arrow">→</span> <span class="val-new">0.7</span>
+          </div>
+          <div class="skill-name">Double Hache Kazor</div>
+          <div class="stat-block">
+            DMG : 37 <span class="arrow">→</span> <span class="val-new">46</span><br>
+            AS &nbsp;: 0.8 <span class="arrow">→</span> <span class="val-new">0.7</span>
+          </div>
+          <div class="skill-name">Marteau Halloween</div>
+          <div class="stat-block">
+            DMG : 40 <span class="arrow">→</span> <span class="val-new">50</span><br>
+            AS &nbsp;: 0.8 <span class="arrow">→</span> <span class="val-new">0.7</span>
+          </div>
+          <div class="skill-name">Marteau Noël</div>
+          <div class="stat-block">
+            DMG : 40 <span class="arrow">→</span> <span class="val-new">50</span><br>
+            AS &nbsp;: 0.8 <span class="arrow">→</span> <span class="val-new">0.7</span>
+          </div>
+          <div class="skill-name">Marteau Abeille</div>
+          <div class="stat-block">
+            DMG : 35-40 <span class="arrow">→</span> <span class="val-new">44-50</span><br>
+            AS &nbsp;: 0.8 &nbsp;&nbsp;<span class="arrow">→</span> <span class="val-new">0.7</span>
+          </div>
+          <div class="skill-name">Lance Abeille</div>
+          <div class="stat-block">
+            DMG : 50 <span class="arrow">→</span> <span class="val-new">63</span>
+          </div>
+          <div class="skill-name">Marteau Nécro</div>
+          <div class="stat-block">
+            DMG : 45-55 <span class="arrow">→</span> <span class="val-new">56-69</span><br>
+            AS &nbsp;: 0.8 &nbsp;<span class="arrow">→</span> <span class="val-new">0.7</span>
+          </div>
+          <div class="callout">🆕 Dégâts critique bonus ajouté sur les armes à deux mains</div>
+
+          <div class="sub-header">🗡️ Assassin</div>
+          <ul>
+            <li><strong>[NOUVEAU]</strong> Chances critique de compétences bonus ajouté sur les armes à deux mains</li>
+            <li><strong>[NOUVEAU]</strong> Stamina bonus ajouté sur les armes à deux mains</li>
+          </ul>
+
+          <div class="sub-header">🏹 Archer</div>
+          <ul>
+            <li><strong>[NOUVEAU]</strong> Chances critique de compétences bonus ajouté sur les arbalètes</li>
+            <li><strong>[NOUVEAU]</strong> Stamina bonus ajouté sur les arbalètes</li>
+          </ul>
+
+          <div class="sub-header">🧙 Mage</div>
+          <div class="skill-name">Bâton Nodachi</div>
+          <div class="stat-block">
+            AS : 1/s <span class="arrow">→</span> <span class="val-new">1.2/s</span>
+          </div>
+
+          <div class="sub-header">💍 Amulette</div>
+          <div class="skill-name">Collier Runique</div>
+          <div class="stat-block">
+            Santé &nbsp;&nbsp;: 15 &nbsp;<span class="arrow">→</span> <span class="val-new">20</span><br>
+            Défense : 2.5 <span class="arrow">→</span> <span class="val-new">3.5</span>
+          </div>`
+      },
+      {
+        type: "adjust",
+        icon: "⚙️",
+        title: "Ajustements",
+        count: "1 changement",
+        content: `
+          <ul>
+            <li>Refonte du <strong>lore</strong> des accessoires, des armes, des catalyseurs et des sets</li>
+          </ul>`
+      },
+      {
+        type: "staff",
+        icon: "📣",
+        title: "Notes du Staff",
+        count: "NerfS_",
+        content: `
+          <div class="staff-note">
+            <div class="name">🎮 NerfS_</div>
+            <em>Bon jeu à tous, merci de l'attente</em>
+          </div>`
+      }
+    ]
+  },
+  {
+    date: "24/03/2026",
+    label: "24 Mars 2026",
+    sections: [
+      {
+        type: "important",
+        icon: "⚔️",
+        title: "Importants",
+        count: "1 rappel",
+        content: `
+          <ul>
+            <li><strong>RAPPEL</strong> — Comme dit dans les derniers changelog, l'évent de la faille est <strong>terminé</strong></li>
+          </ul>`
+      },
+      {
+        type: "add",
+        icon: "✨",
+        title: "Nouveautés",
+        count: "2 ajouts",
+        content: `
+          <ul>
+            <li>Un <strong>repreneur de butins</strong> est arrivé près du forgeron du donjon du Labyrinthe</li>
+            <li>Un <strong>repreneur d'armes</strong> est arrivé à Hanaka</li>
+          </ul>`
+      },
+      {
+        type: "fix",
+        icon: "🔧",
+        title: "Correctifs",
+        count: "1 fix",
+        content: `
+          <ul>
+            <li><strong>Nasgul</strong> effectue de nouveau sa seconde phase</li>
+          </ul>`
+      },
+      {
+        type: "adjust",
+        icon: "⚙️",
+        title: "Ajustements",
+        count: "1 changement",
+        content: `
+          <ul>
+            <li>Le <strong>repreneur de butin de Virelune</strong> vous permet de vendre le venin d'araignée</li>
+          </ul>`
+      },
+      {
+        type: "staff",
+        icon: "📣",
+        title: "Notes du Staff",
+        count: "NerfS_",
+        content: `
+          <div class="staff-note">
+            <div class="name">🎮 NerfS_</div>
+            <em>Bon jeu à tous, merci de votre confiance</em>
+          </div>`
+      }
+    ]
+  },
+  {
+    date: "23/03/2026",
+    label: "23 Mars 2026",
+    sections: [
+      {
+        type: "important",
+        icon: "⚔️",
+        title: "Importants",
+        count: "3 changements",
+        content: `
+          <div class="sub-header">🎁 Compensation World Boss</div>
+          <ul>
+            <li>La <strong>compensation</strong> suite à la première tentative avec le World Boss <em>(15/03)</em> est arrivée auprès d'Hagil — n'est plus disponible</li>
+          </ul>
+          <div class="sub-header">🗑️ Système Poubelle</div>
+          <ul>
+            <li>Il est désormais possible d'accéder à une <strong>interface de poubelle</strong> par le biais de la commande : <strong>/trash</strong></li>
+          </ul>
+          <div class="callout">🎁 Code : <strong>Deonata10</strong></div>
+          <div class="sub-header">💝 Saint Valentin & Nouvel An Chinois</div>
+          <ul>
+            <li>Des PNJs vous permettant d'<strong>échanger vos anciennes ressources</strong> contre des clés et autres sont disponibles à la zone des crates</li>
+          </ul>`
+      },
+      {
+        type: "fix",
+        icon: "🔧",
+        title: "Correctifs",
+        count: "4 fixes",
+        content: `
+          <ul>
+            <li>Les <strong>PNJ</strong> se voient refresh toutes les 6 secondes environ pour pallier aux problèmes d'inactivité</li>
+            <li>La <strong>fusée lunaire</strong> ne fait plus aucun dégâts envers les autres joueurs</li>
+            <li>Les <strong>bourses de la crate Overall</strong> offrent désormais bien les cols</li>
+            <li>Le <strong>passif de l'Archer</strong> est désormais fonctionnel</li>
+          </ul>`
+      },
+      {
+        type: "adjust",
+        icon: "⚙️",
+        title: "Ajustements",
+        count: "1 changement",
+        content: `
+          <div class="sub-header">💎 Cristaux</div>
+          <ul>
+            <li>Les cristaux sont désormais <strong>stackables jusqu'à 8 fois</strong></li>
+          </ul>`
+      },
+      {
+        type: "staff",
+        icon: "📣",
+        title: "Notes du Staff",
+        count: "NerfS_",
+        content: `
+          <div class="staff-note">
+            <div class="name">🎮 NerfS_</div>
+            <em>Bon jeu à tous, merci de votre confiance</em>
+          </div>`
+      }
+    ]
+  },
+  {
     date: "17/03/2026",
     label: "17 Mars 2026",
     sections: [
