@@ -22,32 +22,32 @@ const CHANGELOGS = [
         title: "Nouveautés",
         count: "11 ajouts",
         content: `
-          <div class="callout">⭐ Un <strong>nouvel affichage peaufiné et dynamique</strong> de la barre de vie des monstres</div>
-          <div class="callout">⭐ Le <strong>palier 3</strong> peut désormais être ouvert par le biais de <strong>l'Antre d'Asterius</strong></div>
+          <div class="callout">⭐ <strong>Refonte dynamique de la barre de vie des monstres</strong></div>
+          <div class="callout">⭐ Le <strong>palier 3</strong> est désormais accessible via <strong>l'Antre d'Asterius</strong></div>
 
           <div class="sub-header">🌿 Univers & Ambiance</div>
           <ul>
-            <li><strong>★ La nature prend de plus en plus le dessus</strong> — des oiseaux sont désormais présents dans le ciel, ainsi que d'autres petites créatures</li>
+            <li><strong>★ La nature reprend ses droits</strong> — des oiseaux peuplent désormais le ciel, accompagnés d'autres petites créatures</li>
           </ul>
 
           <div class="sub-header">🎨 Interface & Personnalisation</div>
           <ul>
-            <li><strong>★ Possibilité de cacher ses armures</strong> via deux nouveaux boutons dans vos paramètres Minecraft</li>
-            <li><strong>★ Nouveau Codex pour les monstres</strong> — les kills nécessaires débloquent des informations supplémentaires</li>
-            <li><strong>★ Modification du rendu de l'arc et des bâtons de mage/shaman</strong> dans la main : clic gauche bloqué tant que le cooldown du skill n'est pas fini + animation remaniée</li>
+            <li><strong>★ Masquez votre armure</strong> grâce à deux nouveaux boutons dans les paramètres Minecraft</li>
+            <li><strong>★ Nouveau Codex des monstres</strong> — les éliminations débloquent progressivement des informations supplémentaires</li>
+            <li><strong>★ Refonte du rendu en main de l'arc et des bâtons de mage/shaman</strong> : clic gauche désactivé durant le cooldown du skill, animation retravaillée</li>
           </ul>
 
           <div class="sub-header">⛏️ Outils & Donjons</div>
           <ul>
-            <li>Certains outils possèdent une <strong>puissance de récolte plus élevée</strong></li>
-            <li>Petit à petit, des <strong>archéologues pour les donjons</strong> vont apparaître au sein des paliers</li>
-            <li>Un <strong>Mineur aux champs d'allium et de blé</strong> vous permettra de lui vendre certaines ressources</li>
-            <li>Des <strong>outils pour le donjon Nécrotique</strong> du palier 2</li>
+            <li>Certains outils bénéficient d'une <strong>puissance de récolte accrue</strong></li>
+            <li>Des <strong>archéologues dédiés aux donjons</strong> apparaîtront progressivement dans les paliers</li>
+            <li>Un <strong>Mineur</strong> présent aux champs d'allium et de blé <strong>rachète désormais certaines ressources</strong></li>
+            <li>Ajout d'<strong>outils dédiés au donjon Nécrotique</strong> du palier 2</li>
           </ul>
 
           <div class="sub-header">🎮 Technique</div>
           <ul>
-            <li>Nouveau shader disponible sur le launcher : <strong>"miniature-shaders"</strong>, destiné aux PC peu puissants</li>
+            <li>Nouveau shader disponible depuis le launcher : <strong>"miniature-shaders"</strong>, optimisé pour les PC peu puissants</li>
           </ul>`
       },
       {
@@ -56,37 +56,37 @@ const CHANGELOGS = [
         title: "Ajustements",
         count: "16 changements",
         content: `
-          <div class="callout">⭐ L'effet d'<strong>invisibilité</strong> est désormais efficace face aux monstres (ils ne vous focus plus). De plus, ce que vous tenez dans les mains ainsi que votre armure <strong>disparaissent correctement</strong></div>
+          <div class="callout">⭐ L'<strong>effet d'invisibilité</strong> fonctionne désormais correctement face aux monstres, qui ne vous ciblent plus. L'objet tenu en main ainsi que votre armure <strong>disparaissent également comme prévu</strong></div>
 
           <div class="sub-header">💎 Cristaux</div>
           <ul>
             <li>La <strong>description des cristaux</strong> a été rectifiée</li>
-            <li>Les cristaux sont désormais <strong>différenciés par type</strong> — leurs cooldowns ne sont donc plus tous liés</li>
+            <li>Les cristaux sont désormais <strong>distingués par type</strong> : leurs cooldowns sont indépendants</li>
           </ul>
 
           <div class="sub-header">🖥️ SAOUI</div>
           <ul>
-            <li>Peaufinage du <strong>SAOUI</strong> : vitesse de la barre d'animation, couleur jaune lorsque la vie est à <strong>50% et moins</strong>, et ajout du <strong>symbole de l'effet wither</strong></li>
+            <li>Améliorations du <strong>SAOUI</strong> : ajustement de la vitesse de la barre d'animation, passage au jaune lorsque la vie atteint <strong>50% ou moins</strong>, et ajout du <strong>symbole de l'effet Wither</strong></li>
           </ul>
 
           <div class="sub-header">🗺️ Waypoints</div>
           <ul>
-            <li><strong>Le partage de Waypoints n'est plus autorisé au sein du jeu</strong></li>
+            <li><strong>Le partage de Waypoints n'est plus autorisé en jeu</strong></li>
           </ul>
 
           <div class="sub-header">🛠️ Items & Outils</div>
           <ul>
-            <li>Le <strong>nom des runes</strong> placées sur les items est désormais affiché</li>
-            <li>Correction et peaufinage de l'<strong>affichage des statistiques</strong></li>
-            <li>Les <strong>potions de stamina</strong> donnent bel et bien la moitié de celle de mana</li>
-            <li>Les <strong>donjons</strong> n'offrent plus de cols supplémentaires liés à un facteur de chance — les cols donnés sont désormais <strong>fixes</strong></li>
-            <li>Les <strong>outils existants</strong> avant ce patch note voient leurs statistiques être ajustées</li>
+            <li>Le <strong>nom des runes</strong> placées sur les items s'affiche désormais</li>
+            <li>Correction et amélioration de l'<strong>affichage des statistiques</strong></li>
+            <li>Les <strong>potions de stamina</strong> restaurent désormais la moitié de la valeur des potions de mana</li>
+            <li>Les <strong>donjons</strong> n'offrent plus de cols bonus aléatoires : la récompense en cols est désormais <strong>fixe</strong></li>
+            <li>Les <strong>outils créés avant ce patch</strong> voient leurs statistiques ajustées</li>
             <li><strong>Les outils possèdent désormais une statistique de durabilité</strong></li>
-            <li>Le <strong>prix des outils</strong> est augmenté</li>
-            <li>Le <strong>prix des potions</strong> est augmenté</li>
-            <li>Les <strong>accessoires occultes</strong> voient uniquement leur rareté reléguée à la rareté <strong>légendaire</strong></li>
-            <li>Certains items voient leur <strong>description</strong> être ajustée et peaufinée</li>
-            <li>Certains items voient leur <strong>prix de vente au repreneur de butin</strong> être ajusté</li>
+            <li>Augmentation du <strong>prix des outils</strong></li>
+            <li>Augmentation du <strong>prix des potions</strong></li>
+            <li>La rareté des <strong>accessoires occultes</strong> est désormais fixée à <strong>légendaire</strong></li>
+            <li>La <strong>description</strong> de certains items a été ajustée et retravaillée</li>
+            <li>Le <strong>prix de vente</strong> de certains items au repreneur de butin a été ajusté</li>
           </ul>`
       },
       {
@@ -95,15 +95,15 @@ const CHANGELOGS = [
         title: "Correctifs",
         count: "8 fixes",
         content: `
-          <div class="callout">⭐ Les <strong>items bugués</strong> par le biais d'un affichage corrompu du nom sont corrigés — ces items sont désormais <strong>stackables</strong></div>
+          <div class="callout">⭐ Correction des <strong>items</strong> dont l'affichage du nom était corrompu — ces items sont désormais <strong>stackables</strong></div>
           <ul>
-            <li><strong>★ Crash Kobold</strong> corrigé</li>
-            <li>Le <strong>marchand ambulant des ruines</strong> au palier 1 est désormais bel et bien présent</li>
-            <li>Les <strong>minerais du donjon abeille</strong> du palier 2 ne respawnent plus après être minés</li>
-            <li>Les <strong>barres de vies flottantes et en doublons</strong> sont corrigées</li>
-            <li><strong>"killed by armor stand"</strong> corrigé — le nom du monstre sera désormais affiché correctement</li>
-            <li>La <strong>statistique de consommation restante</strong> sur les items est corrigée</li>
-            <li>Le <strong>ressource pack</strong> est corrigé</li>
+            <li><strong>★ Correction du crash lié au Kobold</strong></li>
+            <li>Le <strong>marchand ambulant des ruines</strong> du palier 1 est à nouveau présent</li>
+            <li>Les <strong>minerais du donjon Abeille</strong> du palier 2 ne réapparaissent plus une fois minés</li>
+            <li>Correction des <strong>barres de vie flottantes et en doublon</strong></li>
+            <li>Correction du message <strong>"killed by armor stand"</strong> : le nom du monstre responsable s'affiche désormais correctement</li>
+            <li>Correction de la <strong>statistique de consommation restante</strong> sur les items</li>
+            <li>Correction du <strong>ressource pack</strong></li>
           </ul>`
       },
       {
