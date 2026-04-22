@@ -13,6 +13,113 @@
 
 const CHANGELOGS = [
   {
+    date: "22/04/2026",
+    label: "22 Avril 2026",
+    sections: [
+      {
+        type: "add",
+        icon: "✨",
+        title: "Nouveautés",
+        count: "11 ajouts",
+        content: `
+          <div class="callout">⭐ Un <strong>nouvel affichage peaufiné et dynamique</strong> de la barre de vie des monstres</div>
+          <div class="callout">⭐ Le <strong>palier 3</strong> peut désormais être ouvert par le biais de <strong>l'Antre d'Asterius</strong></div>
+
+          <div class="sub-header">🌿 Univers & Ambiance</div>
+          <ul>
+            <li><strong>★ La nature prend de plus en plus le dessus</strong> — des oiseaux sont désormais présents dans le ciel, ainsi que d'autres petites créatures</li>
+          </ul>
+
+          <div class="sub-header">🎨 Interface & Personnalisation</div>
+          <ul>
+            <li><strong>★ Possibilité de cacher ses armures</strong> via deux nouveaux boutons dans vos paramètres Minecraft</li>
+            <li><strong>★ Nouveau Codex pour les monstres</strong> — les kills nécessaires débloquent des informations supplémentaires</li>
+            <li><strong>★ Modification du rendu de l'arc et des bâtons de mage/shaman</strong> dans la main : clic gauche bloqué tant que le cooldown du skill n'est pas fini + animation remaniée</li>
+          </ul>
+
+          <div class="sub-header">⛏️ Outils & Donjons</div>
+          <ul>
+            <li>Certains outils possèdent une <strong>puissance de récolte plus élevée</strong></li>
+            <li>Petit à petit, des <strong>archéologues pour les donjons</strong> vont apparaître au sein des paliers</li>
+            <li>Un <strong>Mineur aux champs d'allium et de blé</strong> vous permettra de lui vendre certaines ressources</li>
+            <li>Des <strong>outils pour le donjon Nécrotique</strong> du palier 2</li>
+          </ul>
+
+          <div class="sub-header">🎮 Technique</div>
+          <ul>
+            <li>Nouveau shader disponible sur le launcher : <strong>"miniature-shaders"</strong>, destiné aux PC peu puissants</li>
+          </ul>`
+      },
+      {
+        type: "adjust",
+        icon: "⚙️",
+        title: "Ajustements",
+        count: "16 changements",
+        content: `
+          <div class="callout">⭐ L'effet d'<strong>invisibilité</strong> est désormais efficace face aux monstres (ils ne vous focus plus). De plus, ce que vous tenez dans les mains ainsi que votre armure <strong>disparaissent correctement</strong></div>
+
+          <div class="sub-header">💎 Cristaux</div>
+          <ul>
+            <li>La <strong>description des cristaux</strong> a été rectifiée</li>
+            <li>Les cristaux sont désormais <strong>différenciés par type</strong> — leurs cooldowns ne sont donc plus tous liés</li>
+          </ul>
+
+          <div class="sub-header">🖥️ SAOUI</div>
+          <ul>
+            <li>Peaufinage du <strong>SAOUI</strong> : vitesse de la barre d'animation, couleur jaune lorsque la vie est à <strong>50% et moins</strong>, et ajout du <strong>symbole de l'effet wither</strong></li>
+          </ul>
+
+          <div class="sub-header">🗺️ Waypoints</div>
+          <ul>
+            <li><strong>Le partage de Waypoints n'est plus autorisé au sein du jeu</strong></li>
+          </ul>
+
+          <div class="sub-header">🛠️ Items & Outils</div>
+          <ul>
+            <li>Le <strong>nom des runes</strong> placées sur les items est désormais affiché</li>
+            <li>Correction et peaufinage de l'<strong>affichage des statistiques</strong></li>
+            <li>Les <strong>potions de stamina</strong> donnent bel et bien la moitié de celle de mana</li>
+            <li>Les <strong>donjons</strong> n'offrent plus de cols supplémentaires liés à un facteur de chance — les cols donnés sont désormais <strong>fixes</strong></li>
+            <li>Les <strong>outils existants</strong> avant ce patch note voient leurs statistiques être ajustées</li>
+            <li><strong>Les outils possèdent désormais une statistique de durabilité</strong></li>
+            <li>Le <strong>prix des outils</strong> est augmenté</li>
+            <li>Le <strong>prix des potions</strong> est augmenté</li>
+            <li>Les <strong>accessoires occultes</strong> voient uniquement leur rareté reléguée à la rareté <strong>légendaire</strong></li>
+            <li>Certains items voient leur <strong>description</strong> être ajustée et peaufinée</li>
+            <li>Certains items voient leur <strong>prix de vente au repreneur de butin</strong> être ajusté</li>
+          </ul>`
+      },
+      {
+        type: "fix",
+        icon: "🔧",
+        title: "Correctifs",
+        count: "8 fixes",
+        content: `
+          <div class="callout">⭐ Les <strong>items bugués</strong> par le biais d'un affichage corrompu du nom sont corrigés — ces items sont désormais <strong>stackables</strong></div>
+          <ul>
+            <li><strong>★ Crash Kobold</strong> corrigé</li>
+            <li>Le <strong>marchand ambulant des ruines</strong> au palier 1 est désormais bel et bien présent</li>
+            <li>Les <strong>minerais du donjon abeille</strong> du palier 2 ne respawnent plus après être minés</li>
+            <li>Les <strong>barres de vies flottantes et en doublons</strong> sont corrigées</li>
+            <li><strong>"killed by armor stand"</strong> corrigé — le nom du monstre sera désormais affiché correctement</li>
+            <li>La <strong>statistique de consommation restante</strong> sur les items est corrigée</li>
+            <li>Le <strong>ressource pack</strong> est corrigé</li>
+          </ul>`
+      },
+      {
+        type: "staff",
+        icon: "📣",
+        title: "Notes du Staff",
+        count: "NerfS_",
+        content: `
+          <div class="staff-note">
+            <div class="name">🎮 NerfS_</div>
+            <em>Bon jeu à tous, merci de votre patience</em>
+          </div>`
+      }
+    ]
+  },
+  {
     date: "26/03/2026",
     label: "26 Mars 2026",
     sections: [
