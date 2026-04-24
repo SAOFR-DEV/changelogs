@@ -13,6 +13,47 @@
 
 const CHANGELOGS = [
   {
+    date: "23/04/2026",
+    label: "23 Avril 2026",
+    sections: [
+      {
+        type: "add",
+        icon: "✨",
+        title: "Nouveautés",
+        count: "2 ajouts",
+        content: `
+          <ul>
+            <li>Le <strong>marchand d'Hanaka</strong> est désormais présent</li>
+            <li>Ajout de l'<strong>Âme des Ruines</strong> au sein des marchands ambulants</li>
+          </ul>`
+      },
+      {
+        type: "fix",
+        icon: "🔧",
+        title: "Correctifs",
+        count: "4 fixes",
+        content: `
+          <ul>
+            <li>Le <strong>palier 3</strong> est de nouveau accessible</li>
+            <li>Les <strong>paliers des sets</strong> s'affichent désormais en blanc lorsqu'ils sont activés</li>
+            <li>Correction des <strong>compétences qui ciblaient les papillons</strong></li>
+            <li>Correction du <strong>loot de la bourse du donjon Geldo</strong></li>
+          </ul>`
+      },
+      {
+        type: "staff",
+        icon: "📣",
+        title: "Notes du Staff",
+        count: "NerfS_",
+        content: `
+          <div class="staff-note">
+            <div class="name">🎮 NerfS_</div>
+            <em>Bon jeu à tous</em>
+          </div>`
+      }
+    ]
+  },
+  {
     date: "22/04/2026",
     label: "22 Avril 2026",
     sections: [
