@@ -13,8 +13,8 @@
 
 const CHANGELOGS = [
   {
-    date: "23/04/2026",
-    label: "23 Avril 2026",
+    date: "24/04/2026",
+    label: "24 Avril 2026",
     sections: [
       {
         type: "add",
