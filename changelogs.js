@@ -20,8 +20,9 @@ const CHANGELOGS = [
         type: "add",
         icon: "✨",
         title: "Nouveautés",
-        count: "2 ajouts",
+        count: "3 ajouts",
         content: `
+          <div class="callout">🎵 <strong>De nouvelles musiques font leur apparition sur le palier 3</strong> — l'ambiance sonore couvre désormais l'ensemble du palier</div>
           <ul>
             <li>Le <strong>marchand d'Hanaka</strong> est désormais présent</li>
             <li>Ajout de l'<strong>Âme des Ruines</strong> au sein des marchands ambulants</li>
