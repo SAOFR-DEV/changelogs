@@ -13,6 +13,67 @@
 
 const CHANGELOGS = [
   {
+    date: "27/04/2026",
+    label: "27 Avril 2026",
+    sections: [
+      {
+        type: "add",
+        icon: "✨",
+        title: "Nouveautés",
+        count: "7 ajouts",
+        content: `
+          <ul>
+            <li>Ajout de <strong>15 nouvelles runes</strong></li>
+            <li>Il est désormais possible d'obtenir des <strong>gems</strong> en minant des minerais — certains nécessitent un <strong>niveau de mineur plus élevé</strong> <em>(améthyste non concernée pour l'instant)</em></li>
+            <li>Des <strong>kits de réparation</strong> basique et complet, permettant de réparer vos équipements, sont craftables à la <strong>forge du palier 1</strong></li>
+            <li>Le <strong>chef des Orcs</strong> dégaine sa lame et rejoint le champ de bataille</li>
+            <li><strong>2 nouveaux artisans de runes</strong> font leur entrée au sein du palier 3</li>
+            <li>La <strong>corruption</strong> prend de plus en plus d'ampleur au palier 3</li>
+            <li>Les <strong>aînés</strong> dévoilent leur trésor</li>
+          </ul>`
+      },
+      {
+        type: "adjust",
+        icon: "⚙️",
+        title: "Ajustements",
+        count: "5 changements",
+        content: `
+          <ul>
+            <li>Les <strong>outils cassés</strong> ne peuvent plus être utilisés</li>
+            <li>Les <strong>dash des archers Sylvaers et Sylnovars</strong> sont réduits</li>
+            <li>Les <strong>bandits</strong> peuvent désormais attaquer les joueurs au corps à corps</li>
+            <li>Le <strong>marchand ambulant d'Hanaka en doublon</strong> est supprimé — le bon marchand est désormais présent</li>
+            <li>Les <strong>spawners manquants</strong> dans le labyrinthe du palier 3 sont ajoutés</li>
+          </ul>`
+      },
+      {
+        type: "fix",
+        icon: "🔧",
+        title: "Correctifs",
+        count: "5 fixes",
+        content: `
+          <ul>
+            <li>Les <strong>bottes d'améthyste</strong> sont désormais fonctionnelles</li>
+            <li>Correction des <strong>drops de Muffet</strong></li>
+            <li>Correction des <strong>parchemins incomplet et complet</strong> du palier 3</li>
+            <li>Correction du <strong>lore</strong> de certains items</li>
+            <li>Le <strong>marchand d'accessoires simples</strong> du palier 3 propose désormais les bons accessoires</li>
+          </ul>`
+      },
+      {
+        type: "staff",
+        icon: "📣",
+        title: "Notes du Staff",
+        count: "NerfS_",
+        content: `
+          <div class="staff-note">
+            <div class="name">🎮 NerfS_</div>
+            <em>Bon jeu à tous</em>
+          </div>`
+      }
+    ]
+  },
+  {
     date: "24/04/2026",
     label: "24 Avril 2026",
     sections: [
