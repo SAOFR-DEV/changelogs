@@ -50,9 +50,10 @@ const CHANGELOGS = [
         type: "fix",
         icon: "🔧",
         title: "Correctifs",
-        count: "5 fixes",
+        count: "6 fixes",
         content: `
           <ul>
+            <li>Les <strong>boutons de masquage d'armure</strong> dans les paramètres s'adaptent désormais correctement à la taille du GUI</li>
             <li>Les <strong>bottes d'améthyste</strong> sont désormais fonctionnelles</li>
             <li>Correction des <strong>drops de Muffet</strong></li>
             <li>Correction des <strong>parchemins incomplet et complet</strong> du palier 3</li>
