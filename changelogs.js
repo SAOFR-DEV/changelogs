@@ -30,7 +30,7 @@ const CHANGELOGS = [
             <li>L'<strong>Ebéniste</strong> pose ses valises au sein des paliers, près du Bucheron du Coin</li>
             <li>Les poudres de bois de <strong>bouleau, d'acacia, mais encore de sapin</strong>, sont désormais craftables</li>
             <li>Le <strong>Bucheron du Coin</strong> s'installe aussi dans l'Aincrad</li>
-            <li>Le <strong>Mineur du Coin</strong> fait son arrivé au palier 2 et 3</li>
+            <li>Le <strong>Mineur du Coin</strong> fait son arrivée au palier 2 et 3</li>
             <li>L'<strong>Agriculteur du Coin</strong> pose ses valises à l'Aincrad aussi</li>
             <li><strong>6 nouveaux fortifiants</strong> par palier</li>
             <li>Les plantes <strong>Flarevae</strong> poussent au palier 3</li>
@@ -82,7 +82,7 @@ const CHANGELOGS = [
           <ul>
             <li>Fix de plusieurs <strong>textures du ressource pack</strong></li>
             <li>Correctif <strong>boss samurai et les autres orcs</strong> qui n'attaquaient pas au corps à corps</li>
-            <li>Fix des <strong>Clés des bois Ancien</strong></li>
+            <li>Fix des <strong>Clés des bois Anciens</strong></li>
             <li><strong>Timer ajouté</strong> pour le spawner de Muffet, du Boss Samourai Orc, d'Adoryll, du Roi Goblin, du Boss Bandit, et de l'Alpha Spectral</li>
             <li>Ajout du <strong>set Brumeux</strong> aux Bottes Crocs Brumeux</li>
           </ul>`
@@ -133,7 +133,7 @@ const CHANGELOGS = [
             <li>Les <strong>boutons de masquage d'armure</strong> dans les paramètres s'adaptent désormais correctement à la taille du GUI</li>
             <li>Les <strong>bottes d'améthyste</strong> sont désormais fonctionnelles</li>
             <li>Correction des <strong>drops de Muffet</strong></li>
-            <li>Correction des <strong>parchemins incomplet et complet</strong> du palier 3</li>
+            <li>Correction des <strong>parchemins incomplets et complets</strong> du palier 3</li>
             <li>Correction du <strong>lore</strong> de certains items</li>
             <li>Le <strong>marchand d'accessoires simples</strong> du palier 3 propose désormais les bons accessoires</li>
           </ul>`
@@ -529,7 +529,7 @@ const CHANGELOGS = [
         content: `
           <ul>
             <li>Les <strong>PNJ</strong> se voient refresh toutes les 6 secondes environ pour pallier aux problèmes d'inactivité</li>
-            <li>La <strong>fusée lunaire</strong> ne fait plus aucun dégâts envers les autres joueurs</li>
+            <li>La <strong>fusée lunaire</strong> ne fait plus aucun dégât envers les autres joueurs</li>
             <li>Les <strong>bourses de la crate Overall</strong> offrent désormais bien les cols</li>
             <li>Le <strong>passif de l'Archer</strong> est désormais fonctionnel</li>
           </ul>`
@@ -695,7 +695,7 @@ const CHANGELOGS = [
           </ul>
           <div class="sub-header">🛡️ Items</div>
           <ul>
-            <li>Le <strong>Bâton à Lanterne Lunaire</strong> — la description de son skill a été modifiée : il s'agissait de "Dégâts Critique" et non "Chance Critique"</li>
+            <li>Le <strong>Bâton à Lanterne Lunaire</strong> — la description de son skill a été modifiée : il s'agissait de "Dégâts Critiques" et non "Chances Critiques"</li>
             <li>Mise à jour des <strong>lores des runes</strong></li>
           </ul>
           <div class="sub-header">📊 Stats</div>
@@ -748,7 +748,7 @@ const CHANGELOGS = [
         content: `
           <div class="sub-header">🔮 Runes Remover</div>
           <ul>
-            <li>Les <strong>Runes Remover</strong> permettant d'enlever X nombre de runes selon sa rareté sont implémentés en jeu</li>
+            <li>Les <strong>Runes Remover</strong> permettant d'enlever X nombre de runes selon leur rareté sont implémentées en jeu</li>
             <li>Obtenables en affrontant <strong>Kazor</strong> ou en achetant à son marchand — d'autres manières d'obtention arriveront</li>
           </ul>
           <div class="sub-header">⛏️ Nouveau système de Nodes</div>
@@ -857,7 +857,7 @@ const CHANGELOGS = [
         count: "4 fixes",
         content: `
           <ul>
-            <li>Le <strong>forgeron de lingot de fer</strong> est de nouveau présent</li>
+            <li>Le <strong>forgeron de lingots de fer</strong> est de nouveau présent</li>
             <li>Le <strong>totem</strong> apparaît désormais bien plus vite</li>
             <li>Le combo du <strong>guerrier</strong> suit désormais la direction du regard du joueur et permet d'attaquer les cibles volantes assez proches du sol</li>
             <li>Le combo de l'<strong>assassin</strong> suit désormais la direction du regard du joueur aussi</li>
@@ -870,7 +870,7 @@ const CHANGELOGS = [
         count: "2 changements",
         content: `
           <ul>
-            <li>Indication dans le <strong>lore des skills</strong> si ils sont bindable ou non</li>
+            <li>Indication dans le <strong>lore des skills</strong> s'ils sont bindables ou non</li>
             <li>Optimisation du <strong>totem des shamans</strong> en forme de heal — encore plus optimisé et évite de bloquer la vue avec des particules au milieu de l'écran</li>
           </ul>
           <div class="sub-header">🎬 Vidéos des changements</div>
@@ -894,7 +894,7 @@ const CHANGELOGS = [
           <div class="staff-note">
             <div class="name">🎮 NerfS_</div>
             Avec le nouveau système de donjon développé par <strong>Perrier</strong>, une grosse update l'accompagnera, modifiant certains aspects des donjons autres que ce qu'il se déroule à l'intérieur.<br><br>
-            Je travaille toujours sur le <strong>P3</strong>, aucun soucis de ce côté là.<br><br>
+            Je travaille toujours sur le <strong>P3</strong>, aucun souci de ce côté là.<br><br>
             D'autres ajouts/modifications vont avoir lieu dans les prochaines semaines concernant l'<strong>économie</strong>.<br><br>
             <strong>Deonata</strong> a développé une grande partie concernant la pêche et l'intérêt du métier de récolte de chasseur. Le rework des métiers avance bien, il devrait arriver dans les prochaines semaines.
             <div class="callout">🎁 Code : <strong>Deonata10</strong></div>
