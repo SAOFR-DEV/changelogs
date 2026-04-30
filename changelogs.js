@@ -13,6 +13,83 @@
 
 const CHANGELOGS = [
   {
+    date: "01/05/2026",
+    label: "01 Mai 2026",
+    sections: [
+      {
+        type: "add",
+        icon: "✨",
+        title: "Nouveautés",
+        count: "16 ajouts",
+        content: `
+          <div class="callout">⚫ <strong>open 01/05 17h</strong></div>
+          <div class="callout">🩸 <strong>Ils ont en toujours plus besoin...</strong></div>
+          <ul>
+            <li>Le <strong>Gardien des Paliers</strong> vous permettant de vous téléporter entre les paliers est de nouveau présent</li>
+            <li>Le cooldown des <strong>téléportations entre les paliers</strong> est réduit</li>
+            <li>L'<strong>Ebéniste</strong> pose ses valises au sein des paliers, près du Bucheron du Coin</li>
+            <li>Les poudres de bois de <strong>bouleau, d'acacia, mais encore de sapin</strong>, sont désormais craftables</li>
+            <li>Le <strong>Bucheron du Coin</strong> s'installe aussi dans l'Aincrad</li>
+            <li>Le <strong>Mineur du Coin</strong> fait son arrivé au palier 2 et 3</li>
+            <li>L'<strong>Agriculteur du Coin</strong> pose ses valises à l'Aincrad aussi</li>
+            <li><strong>6 nouveaux fortifiants</strong> par palier</li>
+            <li>Les plantes <strong>Flarevae</strong> poussent au palier 3</li>
+            <li>L'agriculture du <strong>blé</strong> se développe plus au sein du palier 3</li>
+            <li>L'<strong>Assistant de l'Alchimiste</strong> arrive au près de son Maitre au sein des paliers</li>
+            <li>Le <strong>Cristallographe</strong> arrive aussi au palier 1</li>
+            <li>La <strong>corruption</strong> prend encore plus d'ampleur</li>
+            <li>L'<strong>améthyste</strong> permet d'obtenir de nouvelles Gems</li>
+            <li>Les bois ainsi que les plantes vous permettent désormais d'obtenir de <strong>nouvelles ressources inédites</strong>, du même principe que pour les minerais</li>
+            <li>Le bois de <strong>sapin, de bouleau et d'acacia</strong> permet de fabriquer des poudres de bois à leur nature</li>
+          </ul>`
+      },
+      {
+        type: "adjust",
+        icon: "⚙️",
+        title: "Ajustements",
+        count: "15 changements",
+        content: `
+          <ul>
+            <li>Les <strong>Araignées améthyste</strong> sont légèrement nerf</li>
+            <li>Les <strong>Araignées Luminescentes</strong> voient leurs dégâts de toxine drastiquement réduits</li>
+            <li>L'<strong>ingénieur du palier 1</strong> a ajusté sa boutique ainsi que ses prix</li>
+            <li>Les archers <strong>Sylvaer et Sylnovar</strong> sont légèrement moins forts et voient leur taux de drop augmenté (stats, drops)</li>
+            <li>Le drop de l'<strong>Essence de Gorbel</strong> passe à 50%</li>
+            <li>Le drop du <strong>Croc d'Albal</strong> passe à 40%</li>
+            <li>Ajustement des <strong>potions de vie</strong> achetables et craftables</li>
+            <li>Ajustement des <strong>potions de mana</strong> achetables et craftables</li>
+            <li>Ajustement des <strong>potions de stamina</strong> achetables et craftables</li>
+            <li>Les <strong>minerais géants d'améthyste</strong> sont ajustés :
+              <ul>
+                <li>Désormais vous avez 50% de chance d'avoir entre <strong>2-4 minerais d'améthyste</strong>, ou <strong>2 éclats d'améthyste</strong></li>
+                <li>Vos pioches subissent <strong>2 dégâts de durabilité</strong> par coup</li>
+                <li>Ne demande plus une pioche précise, mais une <strong>puissance de récolte de 2 minimum</strong></li>
+              </ul>
+            </li>
+            <li>Les minerais <strong>d'améthyste et d'onyx</strong> infligent 2 de dégâts de durabilité sur vos pioches</li>
+            <li>Les troncs ainsi que les buches de <strong>sapin</strong> infligent 2 de dégâts de durabilité sur vos haches</li>
+            <li>La pioche, houe et hache <strong>Renforcée du palier 3</strong> voient leur puissance de récolte être diminuée à 1 et leur durabilité être ajustée de 576 à 832</li>
+            <li>La pioche, houe et hache <strong>Nécrotique du palier 2</strong> voient leur durabilité être augmentée de 608 à 768</li>
+            <li>La pioche, houe et hache de <strong>Métal du palier 1</strong> voient leur durabilité être augmentée de 576 à 640</li>
+          </ul>`
+      },
+      {
+        type: "fix",
+        icon: "🔧",
+        title: "Correctifs",
+        count: "5 fixes",
+        content: `
+          <ul>
+            <li>Fix de plusieurs <strong>textures du ressource pack</strong></li>
+            <li>Correctif <strong>boss samurai et les autres orcs</strong> qui n'attaquaient pas au corps à corps</li>
+            <li>Fix des <strong>Clés des bois Ancien</strong></li>
+            <li><strong>Timer ajouté</strong> pour le spawner de Muffet, du Boss Samourai Orc, d'Adoryll, du Roi Goblin, du Boss Bandit, et de l'Alpha Spectral</li>
+            <li>Ajout du <strong>set Brumeux</strong> aux Bottes Crocs Brumeux</li>
+          </ul>`
+      }
+    ]
+  },
+  {
     date: "27/04/2026",
     label: "27 Avril 2026",
     sections: [
