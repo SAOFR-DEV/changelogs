@@ -13,6 +13,89 @@
 
 const CHANGELOGS = [
   {
+    date: "02/05/2026",
+    label: "02 Mai 2026",
+    sections: [
+      {
+        type: "important",
+        icon: "⚔️",
+        title: "Importants",
+        count: "6 rumeurs",
+        content: `
+          <ul>
+            <li>Les <strong>Aînés</strong> tentent de dissimuler leur héritage autant qu'ils le peuvent…</li>
+            <li>Être un <strong>délinquant</strong> est une chose, pactiser avec le diable en est une autre…</li>
+            <li>Elle continue de prendre du terrain : certaines <strong>reliques</strong> sont même devenues impuissantes face à elle, qu'importe leur nature…</li>
+            <li>Ils s'attaquent désormais de manière sanglante, <strong>même aux Aînés</strong>…</li>
+            <li>On dit qu'il existe un lieu, dans leur mythologie, où leur <strong>résurrection</strong> est possible — mais même face à elle, ils ont fini par disparaître…</li>
+            <li>Il continue d'étendre son ombre, et certains disent que les <strong>richesses les plus enfouies</strong> finissent par se lover sous son emprise… comme attirées par une énième foudre qu'il porte en lui…</li>
+          </ul>`
+      },
+      {
+        type: "add",
+        icon: "✨",
+        title: "Nouveautés",
+        count: "9 ajouts",
+        content: `
+          <div class="callout">⭐ <strong>L'Alpha des Bois</strong> sort de sa tanière et vient défendre sa meute au palier 3</div>
+          <div class="sub-header">💎 Équipements palier 3</div>
+          <ul>
+            <li><strong>3 nouveaux sets</strong> au palier 3</li>
+            <li><strong>2 nouvelles amulettes</strong> au palier 3</li>
+            <li><strong>4 nouveaux bracelets</strong> au palier 3</li>
+            <li><strong>4 nouveaux gants</strong> au palier 3</li>
+            <li><strong>9 nouveaux artefacts</strong> au palier 3</li>
+            <li><strong>3 nouvelles runes</strong> au palier 3</li>
+          </ul>
+          <div class="sub-header">💰 Autres ajouts</div>
+          <ul>
+            <li>Ajout des <strong>bourses moyennes</strong> dans la crate bandit du palier 3</li>
+            <li><strong>1 nouvelle amulette</strong> au palier 1</li>
+          </ul>`
+      },
+      {
+        type: "adjust",
+        icon: "⚙️",
+        title: "Ajustements",
+        count: "13 changements",
+        content: `
+          <div class="sub-header">📈 Équilibrage palier 3</div>
+          <ul>
+            <li>Buff des <strong>gants 🩸</strong> du palier 3</li>
+            <li>Buff des <strong>bottes 🩸</strong> du palier 3</li>
+            <li><strong>Muffet, la Reine des Araignées</strong>, gagne uniquement en puissance</li>
+            <li>Légère augmentation du taux d'apparition des <strong>boss corrompus</strong> au sein du palier 3</li>
+            <li>Ajustement des compétences des <strong>araignées d'améthyste</strong></li>
+            <li>Réduction de la <strong>portée du grab</strong> des Tréants du Labyrinthe et des Anciens du Labyrinthe (palier 3)</li>
+            <li>Réduction du <strong>pourcentage de dégâts supplémentaires subis</strong> sur les bottes de catégorie artefact</li>
+            <li>Ajustement du <strong>drop des maces</strong> des Sentinelles du Kobold</li>
+          </ul>
+          <div class="sub-header">🖥️ Affichage & Interface</div>
+          <ul>
+            <li>Ajustement des <strong>noms des statistiques</strong> et de leur affichage sur les items</li>
+            <li>Ajustement de l'affichage de la <strong>vitesse d'attaque</strong> dans le menu "Information Joueur"</li>
+            <li>Ajustement de l'affichage de la <strong>vitesse de déplacement</strong> sur les items</li>
+            <li>Ajustement de l'affichage des <strong>sets équipés</strong></li>
+          </ul>
+          <div class="sub-header">⛏️ Récolte</div>
+          <ul>
+            <li>Les minerais d'<strong>Ambre Mielleux</strong> sont désormais bel et bien récoltables</li>
+          </ul>`
+      },
+      {
+        type: "staff",
+        icon: "📣",
+        title: "Notes du Staff",
+        count: "NerfS_",
+        content: `
+          <div class="staff-note">
+            <div class="name">🎮 NerfS_</div>
+            <em>Bon jeu à tous</em>
+          </div>`
+      }
+    ]
+  },
+  {
     date: "01/05/2026",
     label: "01 Mai 2026",
     sections: [
