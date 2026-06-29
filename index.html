@@ -137,6 +137,22 @@
   .theme-btn:hover { color: var(--ink); border-color: var(--line-2); background: var(--surface-2); }
   .theme-btn svg { width: 16px; height: 16px; }
 
+  /* Language switch */
+  .lang-switch {
+    display: inline-flex; align-items: stretch;
+    height: 34px; border: 1px solid var(--line);
+    border-radius: 9px; overflow: hidden; background: var(--surface);
+  }
+  .lang-opt {
+    padding: 0 10px; min-width: 34px;
+    font-size: .72rem; font-weight: 700; letter-spacing: .03em;
+    background: transparent; color: var(--ink-3);
+    transition: color .15s var(--ease), background .15s var(--ease);
+  }
+  .lang-opt + .lang-opt { border-left: 1px solid var(--line); }
+  .lang-opt:hover { color: var(--ink); background: var(--surface-2); }
+  .lang-opt.is-active { color: var(--accent-i); background: var(--accent-s); }
+
   /* ============================================================
      PAGE
   ============================================================ */
@@ -476,6 +492,10 @@
         <span class="brand-name">Fractured Underworld<span class="brand-sub"> · SAOFR</span></span>
       </a>
       <div class="hd-right">
+        <div class="lang-switch" role="group" aria-label="Langue / Language">
+          <button class="lang-opt" data-lang="fr" aria-pressed="true">FR</button>
+          <button class="lang-opt" data-lang="en" aria-pressed="false">EN</button>
+        </div>
         <button class="theme-btn" id="theme-toggle" aria-label="Basculer le thème"></button>
       </div>
     </div>
@@ -501,14 +521,69 @@
   const MOON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>`;
   const CHEV = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>`;
 
+  /* ── i18n ─────────────────────────────────────────────────── */
+  const UI = {
+    fr: {
+      htmlLang: 'fr',
+      themeDark: 'Passer en thème clair',
+      themeLight: 'Passer en thème sombre',
+      latest: 'Dernier patch',
+      category: n => `${n} catégorie${n > 1 ? 's' : ''}`,
+      section: n => `${n} section${n > 1 ? 's' : ''}`,
+      historyTitle: 'Historique',
+      historyCount: n => `${n} version${n > 1 ? 's' : ''} précédente${n > 1 ? 's' : ''}`,
+    },
+    en: {
+      htmlLang: 'en',
+      themeDark: 'Switch to light theme',
+      themeLight: 'Switch to dark theme',
+      latest: 'Latest patch',
+      category: n => `${n} categor${n > 1 ? 'ies' : 'y'}`,
+      section: n => `${n} section${n > 1 ? 's' : ''}`,
+      historyTitle: 'History',
+      historyCount: n => `${n} previous version${n > 1 ? 's' : ''}`,
+    },
+  };
+  const LANG_KEY = 'fu-lang';
+  let LANG = (() => {
+    try { const s = localStorage.getItem(LANG_KEY); if (s === 'fr' || s === 'en') return s; } catch (e) {}
+    return (navigator.language || '').toLowerCase().startsWith('en') ? 'en' : 'fr';
+  })();
+  const U = () => UI[LANG];
+  function t(v) {
+    if (v && typeof v === 'object' && !Array.isArray(v)) return v[LANG] ?? v.fr ?? v.en ?? '';
+    return v ?? '';
+  }
+
+  /* ── Theme toggle ─────────────────────────────────────────── */
   let dark = true;
   const themeBtn = document.getElementById('theme-toggle');
   function applyTheme() {
     document.documentElement.dataset.theme = dark ? 'dark' : 'light';
     themeBtn.innerHTML = dark ? SUN : MOON;
+    themeBtn.setAttribute('aria-label', dark ? U().themeDark : U().themeLight);
   }
-  applyTheme();
   themeBtn.addEventListener('click', () => { dark = !dark; applyTheme(); });
+
+  /* ── Language switch ──────────────────────────────────────── */
+  const langOpts = document.querySelectorAll('.lang-opt');
+  function syncLangUI() {
+    document.documentElement.lang = U().htmlLang;
+    langOpts.forEach(b => {
+      const on = b.dataset.lang === LANG;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    applyTheme();
+  }
+  langOpts.forEach(b => b.addEventListener('click', () => {
+    if (b.dataset.lang === LANG) return;
+    LANG = b.dataset.lang;
+    try { localStorage.setItem(LANG_KEY, LANG); } catch (e) {}
+    syncLangUI();
+    render();
+  }));
+  syncLangUI();
 
   /* ── Section type metadata ────────────────────────────────── */
   const TYPE_DOT = {
@@ -528,17 +603,17 @@
       <div class="sec-card ${sec.type} ${open ? 'is-open' : 'collapsed'}" data-sec>
         <button class="sec-hd" aria-expanded="${open}" onclick="toggleSec(this.closest('[data-sec]'))">
           <span class="sec-icon">${sec.icon}</span>
-          <span class="sec-title">${sec.title}</span>
-          <span class="sec-count">${sec.count}</span>
+          <span class="sec-title">${t(sec.title)}</span>
+          <span class="sec-count">${t(sec.count)}</span>
           <span class="sec-chev">${CHEV}</span>
         </button>
-        <div class="sec-body">${sec.content}</div>
+        <div class="sec-body">${t(sec.content)}</div>
       </div>`;
   }
 
   function changelogCard(cl, idx) {
     const visibleSecs = cl.sections.filter(s => s.type !== 'staff');
-    const chips = visibleSecs.map(s => chip(s.type, s.title)).join('');
+    const chips = visibleSecs.map(s => chip(s.type, t(s.title))).join('');
     const secCount = cl.sections.length;
     const open = idx === 0;
     const sections = cl.sections.map(s => sectionCard(s, false)).join('');
@@ -548,8 +623,8 @@
           <div class="cl-hd-l">
             <span class="cl-date-badge">${cl.date}</span>
             <div class="cl-meta">
-              <div class="cl-label">${cl.label}</div>
-              <div class="cl-sub">${secCount} section${secCount > 1 ? 's' : ''}</div>
+              <div class="cl-label">${t(cl.label)}</div>
+              <div class="cl-sub">${U().section(secCount)}</div>
             </div>
           </div>
           <div class="cl-hd-r">
@@ -563,17 +638,17 @@
 
   function hero(cl) {
     const visibleSecs = cl.sections.filter(s => s.type !== 'staff');
-    const chips = visibleSecs.map(s => chip(s.type, s.title)).join('');
+    const chips = visibleSecs.map(s => chip(s.type, t(s.title))).join('');
     const sections = cl.sections.map(s => sectionCard(s, true)).join('');
     return `
       <section class="hero">
         <div class="hero-meta">
-          <span class="hero-kicker">Dernier patch</span>
+          <span class="hero-kicker">${U().latest}</span>
           <span class="hero-dot">·</span>
           <span>${cl.date}</span>
         </div>
-        <h1 class="hero-title"><span class="accent">#</span> ${cl.label}</h1>
-        <p class="hero-info">${visibleSecs.length} catégorie${visibleSecs.length > 1 ? 's' : ''} · ${cl.sections.length} section${cl.sections.length > 1 ? 's' : ''}</p>
+        <h1 class="hero-title"><span class="accent">#</span> ${t(cl.label)}</h1>
+        <p class="hero-info">${U().category(visibleSecs.length)} · ${U().section(cl.sections.length)}</p>
         <div class="hero-chips">${chips}</div>
         <div class="hero-sections">${sections}</div>
       </section>`;
@@ -592,15 +667,16 @@
   }
 
   /* ── Render ───────────────────────────────────────────────── */
-  function init() {
+  function render() {
+    if (typeof CHANGELOGS === 'undefined') return;
     const [latest, ...history] = CHANGELOGS;
     const content = document.getElementById('content');
 
     const historyHtml = history.length ? `
       <section>
         <div class="history-hd">
-          <h2 class="history-title">Historique</h2>
-          <span class="history-count">${history.length} version${history.length > 1 ? 's' : ''} précédente${history.length > 1 ? 's' : ''}</span>
+          <h2 class="history-title">${U().historyTitle}</h2>
+          <span class="history-count">${U().historyCount(history.length)}</span>
         </div>
         <div class="history-list">${history.map((cl, i) => changelogCard(cl, i)).join('')}</div>
       </section>` : '';
@@ -614,7 +690,7 @@
   const _s = document.createElement('script');
   _s.src = 'changelogs.js?t=' + Date.now();
   document.head.appendChild(_s);
-  _s.onload = init;
+  _s.onload = render;
 </script>
 
 </body>
