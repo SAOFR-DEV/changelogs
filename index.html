@@ -411,14 +411,14 @@
   .cl-card.is-open { box-shadow: var(--shadow); border-color: var(--line-2); }
 
   .cl-hd {
-    width: 100%; display: flex; align-items: center; justify-content: space-between;
+    width: 100%; display: flex; align-items: center;
     gap: 14px; padding: .9rem 1.2rem;
     background: transparent; text-align: left; color: inherit;
     transition: background .15s var(--ease);
   }
   .cl-hd:hover { background: var(--surface-2); }
-  .cl-hd-l { display: flex; align-items: center; gap: 14px; min-width: 0; }
-  .cl-hd-r { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+  .cl-hd-l { display: flex; align-items: center; gap: 14px; min-width: 0; flex: 0 1 auto; }
+  .cl-hd-r { display: flex; align-items: center; gap: 10px; min-width: 0; flex: 1 1 0; justify-content: flex-end; }
 
   .cl-date-badge {
     font-family: 'JetBrains Mono', monospace;
@@ -439,7 +439,7 @@
   }
   .cl-sub { font-size: .72rem; color: var(--ink-3); margin-top: 2px; }
 
-  .cl-chips { display: flex; gap: 4px; flex-wrap: wrap; }
+  .cl-chips { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
   .cl-chev {
     color: var(--ink-3);
     transition: transform .25s var(--ease);
